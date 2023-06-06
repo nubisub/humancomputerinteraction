@@ -228,7 +228,7 @@ export default function Home() {
 			</div>
 			<div className="p-10 w-full">
 				<p className="text-wrap">
-					The standard Lorem Ipsum passage, used since the 1500s "Lorem ipsum
+					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
 					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -237,7 +237,7 @@ export default function Home() {
 					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
 				</p>
 				<p className="text-wrap">
-					The standard Lorem Ipsum passage, used since the 1500s "Lorem ipsum
+					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
 					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -246,7 +246,7 @@ export default function Home() {
 					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
 				</p>
 				<p className="text-wrap">
-					The standard Lorem Ipsum passage, used since the 1500s "Lorem ipsum
+					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
 					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -255,7 +255,7 @@ export default function Home() {
 					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
 				</p>
 				<p className="text-wrap">
-					The standard Lorem Ipsum passage, used since the 1500s "Lorem ipsum
+					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
 					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -264,7 +264,7 @@ export default function Home() {
 					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
 				</p>
 				<p className="text-wrap">
-					The standard Lorem Ipsum passage, used since the 1500s "Lorem ipsum
+					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
 					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
