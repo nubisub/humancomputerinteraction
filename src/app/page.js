@@ -1,21 +1,16 @@
 "use client";
 
-import Image from "next/image";
-import { Popover } from "@headlessui/react";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Fragment } from "react";
 import { Transition } from "@headlessui/react";
 import { Menu } from "@headlessui/react";
-import { EditIcon } from "@heroicons/react/outline";
-import { DuplicateIcon } from "@heroicons/react/outline";
 
 export default function Home() {
 	return (
-		<main className="absolute min-w-[calc(100vw-250px)] min-h-screen left-[250px]">
+		<main className="absolute min-w-[calc(100vw-267px)] min-h-screen left-[250px]">
 			<div className="flex justify-between items-center border-b border-gray-50 border-opacity-20 p-12 py-4">
 				{/* Searchbar */}
 				<div className="">
-					<div className="relative flex items-center w-full h-12 rounded-full focus-within:shadow-lg bg-white overflow-hidden">
+					<div className="relative flex items-center w-full h-10 rounded-full focus-within:shadow-lg bg-white overflow-hidden">
 						<div className="grid place-items-center h-full w-12 ml-2 text-gray-400">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +29,7 @@ export default function Home() {
 						</div>
 
 						<input
-							className="peer h-full w-full outline-none text-sm text-gray-700 pr-2"
+							className="peer h-full w-full outline-none text-sm text-gray-700 pr-8"
 							type="text"
 							id="search"
 							placeholder="Cari Sesuatu ..."
@@ -227,6 +222,222 @@ export default function Home() {
 				</div>
 			</div>
 			<div className="p-10 w-full">
+				<p className="text-wrap">
+					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
+					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+				</p>
+				<p className="text-wrap">
+					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
+					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+				</p>
+				<p className="text-wrap">
+					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
+					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+				</p>
+				<p className="text-wrap">
+					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
+					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+				</p>
+				<p className="text-wrap">
+					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
+					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+				</p>
+				<p className="text-wrap">
+					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
+					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+				</p>
+				<p className="text-wrap">
+					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
+					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+				</p>
+				<p className="text-wrap">
+					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
+					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+				</p>
+				<p className="text-wrap">
+					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
+					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+				</p>
+				<p className="text-wrap">
+					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
+					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+				</p>
+				<p className="text-wrap">
+					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
+					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+				</p>
+				<p className="text-wrap">
+					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
+					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+				</p>
+				<p className="text-wrap">
+					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
+					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+				</p>
+				<p className="text-wrap">
+					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
+					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+				</p>
+				<p className="text-wrap">
+					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
+					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+				</p>
+				<p className="text-wrap">
+					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
+					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+				</p>
+				<p className="text-wrap">
+					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
+					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+				</p>
+				<p className="text-wrap">
+					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
+					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+				</p>
+				<p className="text-wrap">
+					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
+					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+				</p>
+				<p className="text-wrap">
+					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
+					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+				</p>
+				<p className="text-wrap">
+					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
+					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+				</p>
+				<p className="text-wrap">
+					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
+					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+				</p>
+				<p className="text-wrap">
+					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
+					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+				</p>
+				<p className="text-wrap">
+					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
+					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+				</p>
 				<p className="text-wrap">
 					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
 					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
