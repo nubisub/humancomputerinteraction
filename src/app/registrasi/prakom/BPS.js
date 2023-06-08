@@ -1,9 +1,6 @@
 import { Dialog, Transition, Tab} from "@headlessui/react";
 import { Fragment, useState } from "react";
-import { PageNotFoundError } from "next/dist/shared/lib/utils";
-function classNames(...classes) {
-	return classes.filter(Boolean).join(" ");
-}
+
 const jabatan = [
 	"Pranata Komputer Muda",
 	"Pranata Komputer Muda Tingkat I",

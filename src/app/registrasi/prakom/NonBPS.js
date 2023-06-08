@@ -1,13 +1,14 @@
 import { Dialog, Transition, Tab } from "@headlessui/react";
 import { Fragment } from "react";
 import { useState, useEffect } from "react";
-async function getData() {
-	const res = await fetch("/api/regions");
-	if (!res.ok) {
-		throw new Error("Failed to fetch data");
-	}
-	return res.json();
-}
+// import { baseUrl } from "../../../config";
+// async function getData() {
+// 	const res = await fetch(`${baseUrl}/api/regions`);
+// 	if (!res.ok) {
+// 		throw new Error("Failed to fetch data");
+// 	}
+// 	return res.json();
+// }
 
 const pendidikan = [
 	"-",
@@ -75,10 +76,10 @@ export default function NonBPS() {
 	const [regions, setRegions] = useState([]);
 	const [selectedRegion, setSelectedRegion] = useState(null);
 	const [kabupaten, setKabupaten] = useState([]);
-	useEffect(() => {
-		getData().then((data) => setRegions(data));
-		console.log(regions);
-	}, []);
+	// useEffect(() => {
+	// 	getData().then((data) => setRegions(data));
+	// 	console.log(regions);
+	// }, []);
 	useEffect(() => {
 		console.log(selectedRegion);
 		if (selectedRegion) {
