@@ -1,488 +1,149 @@
 "use client";
-
-import { Fragment } from "react";
-import { Transition } from "@headlessui/react";
-import { Menu } from "@headlessui/react";
-
+import Link from "next/link";
+import TopNav from "./topNav";
 export default function Home() {
 	return (
-		<main className="absolute min-w-[calc(100vw-267px)] min-h-screen left-[250px]">
-			<div className="flex justify-between items-center border-b border-gray-50 border-opacity-20 p-12 py-4">
-				{/* Searchbar */}
-				<div className="">
-					<div className="relative flex items-center w-full h-10 rounded-full focus-within:shadow-lg bg-white overflow-hidden">
-						<div className="grid place-items-center h-full w-12 ml-2 text-gray-400">
+		<main className="absolute w-[calc(100vw-267px)] box-border py-2 px-20 left-[250px]">
+			<TopNav />
+			<div className="flex flex-col bg-white px-16 py-8 rounded-lg my-4 shadow-lg">
+				<h3 class="text-2xl text-gray-700 font-bold  ml-3">
+					Selamat Datang, Admin
+				</h3>
+				<h4 class="text-lg text-gray-700  mb-8 ml-3">
+					Sistem Informasi Jabatan Fungsional
+				</h4>
+
+				<ol class="relative border-l border-gray-200 dark:border-gray-700">
+					<li class="mb-10 ml-6">
+						<span class="absolute flex items-center justify-center w-6 h-6 bg-white rounded-full -left-3 ring-8 ring-white ">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
-								className="h-6 w-6"
 								fill="none"
 								viewBox="0 0 24 24"
+								strokeWidth={1.5}
 								stroke="currentColor"
+								className="w-6 h-6"
 							>
 								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z"
 								/>
 							</svg>
-						</div>
-
-						<input
-							className="peer h-full w-full outline-none text-sm text-gray-700 pr-8"
-							type="text"
-							id="search"
-							placeholder="Cari Sesuatu ..."
-						/>
-					</div>
-				</div>
-
-				{/* Akun dan Notifikasi */}
-				<div className="flex gap-x-4">
-					<Menu as="div" className="relative inline-block text-left">
-						<div>
-							<Menu.Button className="inline-flex w-full justify-center rounded-full bg-black bg-opacity-20 p-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									strokeWidth={1.5}
-									stroke="currentColor"
-									className="w-5 h-5"
-								>
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
-									/>
-								</svg>
-							</Menu.Button>
-						</div>
-						<Transition
-							as={Fragment}
-							enter="transition ease-out duration-100"
-							enterFrom="transform opacity-0 scale-95"
-							enterTo="transform opacity-100 scale-100"
-							leave="transition ease-in duration-75"
-							leaveFrom="transform opacity-100 scale-100"
-							leaveTo="transform opacity-0 scale-95"
-						>
-							<Menu.Items className="absolute overflow-y-scroll max-h-[400px] right-0 mt-2 min-w-[450px] origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-								<div>
-									<div className="flex justify-between items-center p-4">
-										<span className="text-sm">
-											You have <b>13</b> notifications.
-										</span>
-									</div>
-									<Menu.Item className="p-4 border-b">
-										{({ active }) => (
-											<button
-												className={`${
-													active ? "bg-slate-100" : "text-gray-900"
-												} group flex w-full flex-col rounded-md px-4 py-2 text-sm`}
-											>
-												<h2 className="font-semibold">John Snow</h2>
-												<span className="text-gray-500 text-left">
-													Membuat artikel yang berjudul Hasil Uji Kompetensi
-													Jabatan Fungsional Statistisi dan Pranata Komputer
-													periode Juni 2022
-												</span>
-											</button>
-										)}
-									</Menu.Item>
-									<Menu.Item className="p-4 border-b">
-										{({ active }) => (
-											<button
-												className={`${
-													active ? "bg-slate-100" : "text-gray-900"
-												} group flex w-full flex-col rounded-md px-4 py-2 text-sm`}
-											>
-												<h2 className="font-semibold">John Snow</h2>
-												<span className="text-gray-500 text-left">
-													Membuat artikel yang berjudul Hasil Uji Kompetensi
-													Jabatan Fungsional Statistisi dan Pranata Komputer
-													periode Juni 2022
-												</span>
-											</button>
-										)}
-									</Menu.Item>
-									<Menu.Item className="p-4 border-b">
-										{({ active }) => (
-											<button
-												className={`${
-													active ? "bg-slate-100" : "text-gray-900"
-												} group flex w-full flex-col rounded-md px-4 py-2 text-sm`}
-											>
-												<h2 className="font-semibold">John Snow</h2>
-												<span className="text-gray-500 text-left">
-													Membuat artikel yang berjudul Hasil Uji Kompetensi
-													Jabatan Fungsional Statistisi dan Pranata Komputer
-													periode Juni 2022
-												</span>
-											</button>
-										)}
-									</Menu.Item>
-									<Menu.Item className="p-4 border-b">
-										{({ active }) => (
-											<button
-												className={`${
-													active ? "bg-slate-100" : "text-gray-900"
-												} group flex w-full flex-col rounded-md px-4 py-2 text-sm`}
-											>
-												<h2 className="font-semibold">John Snow</h2>
-												<span className="text-gray-500 text-left">
-													Membuat artikel yang berjudul Hasil Uji Kompetensi
-													Jabatan Fungsional Statistisi dan Pranata Komputer
-													periode Juni 2022
-												</span>
-											</button>
-										)}
-									</Menu.Item>
-								</div>
-								<div className="px-1 py-1"></div>
-							</Menu.Items>
-						</Transition>
-					</Menu>
-					<Menu as="div" className="relative inline-block text-left">
-						<div>
-							<Menu.Button className="inline-flex w-full justify-center rounded-full bg-black bg-opacity-20 p-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									viewBox="0 0 24 24"
-									fill="currentColor"
-									class="w-5 h-5"
-								>
-									<path
-										fill-rule="evenodd"
-										d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
-										clip-rule="evenodd"
-									/>
-								</svg>
-							</Menu.Button>
-						</div>
-						<Transition
-							as={Fragment}
-							enter="transition ease-out duration-100"
-							enterFrom="transform opacity-0 scale-95"
-							enterTo="transform opacity-100 scale-100"
-							leave="transition ease-in duration-75"
-							leaveFrom="transform opacity-100 scale-100"
-							leaveTo="transform opacity-0 scale-95"
-						>
-							<Menu.Items className="absolute right-0 mt-2 w-40 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-								<div className="px-1 py-1 ">
-									<Menu.Item>
-										{({ active }) => (
-											<button
-												className={`${
-													active ? "bg-slate-100" : "text-gray-900"
-												} group flex w-full flex-col rounded-md px-4 py-2 text-sm`}
-											>
-												My Profile
-											</button>
-										)}
-									</Menu.Item>
-									<Menu.Item>
-										{({ active }) => (
-											<button
-												className={`${
-													active ? "bg-slate-100" : "text-gray-900"
-												} group flex w-full flex-col rounded-md px-4 py-2 text-sm`}
-											>
-												Setting
-											</button>
-										)}
-									</Menu.Item>
-									<Menu.Item>
-										{({ active }) => (
-											<button
-												className={`${
-													active ? "bg-slate-100" : "text-gray-900"
-												} group flex w-full flex-col rounded-md px-4 py-2 text-sm`}
-											>
-												Activity
-											</button>
-										)}
-									</Menu.Item>
-									<Menu.Item>
-										{({ active }) => (
-											<button
-												className={`${
-													active ? "bg-slate-100" : "text-gray-900"
-												} group flex w-full flex-col rounded-md px-4 py-2 text-sm`}
-											>
-												Logout
-											</button>
-										)}
-									</Menu.Item>
-								</div>
-							</Menu.Items>
-						</Transition>
-					</Menu>
-				</div>
-			</div>
-			<div className="p-10 w-full">
-				<p className="text-wrap">
-					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
-					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				</p>
-				<p className="text-wrap">
-					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
-					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				</p>
-				<p className="text-wrap">
-					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
-					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				</p>
-				<p className="text-wrap">
-					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
-					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				</p>
-				<p className="text-wrap">
-					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
-					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				</p>
-				<p className="text-wrap">
-					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
-					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				</p>
-				<p className="text-wrap">
-					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
-					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				</p>
-				<p className="text-wrap">
-					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
-					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				</p>
-				<p className="text-wrap">
-					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
-					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				</p>
-				<p className="text-wrap">
-					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
-					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				</p>
-				<p className="text-wrap">
-					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
-					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				</p>
-				<p className="text-wrap">
-					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
-					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				</p>
-				<p className="text-wrap">
-					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
-					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				</p>
-				<p className="text-wrap">
-					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
-					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				</p>
-				<p className="text-wrap">
-					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
-					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				</p>
-				<p className="text-wrap">
-					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
-					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				</p>
-				<p className="text-wrap">
-					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
-					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				</p>
-				<p className="text-wrap">
-					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
-					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				</p>
-				<p className="text-wrap">
-					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
-					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				</p>
-				<p className="text-wrap">
-					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
-					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				</p>
-				<p className="text-wrap">
-					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
-					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				</p>
-				<p className="text-wrap">
-					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
-					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				</p>
-				<p className="text-wrap">
-					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
-					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				</p>
-				<p className="text-wrap">
-					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
-					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				</p>
-				<p className="text-wrap">
-					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
-					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				</p>
-				<p className="text-wrap">
-					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
-					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				</p>
-				<p className="text-wrap">
-					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
-					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				</p>
-				<p className="text-wrap">
-					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
-					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				</p>
-				<p className="text-wrap">
-					The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
-					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				</p>
+						</span>
+						<h3 class="flex items-center mb-1 text-lg font-semibold">
+							Berita Terkini
+							<span class="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ml-3">
+								Latest
+							</span>
+						</h3>
+						<time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+							Released on January 13th, 2022
+						</time>
+						<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+							Sistem Informasi Jabatan Fungsional Sistem Informasi Jabatan
+							Fungsional Sistem Informasi Jabatan Fungsional Sistem Informasi
+							Jabatan Fungsional
+						</p>
+						
+					</li>
+					<li class="ml-6 mb-10">
+						<span class="absolute flex items-center justify-center w-6 h-6 bg-white rounded-full -left-3 ring-8 ring-white">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								strokeWidth={1.5}
+								stroke="currentColor"
+								className="w-6 h-6"
+							>
+								<path
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"
+								/>
+							</svg>
+						</span>
+						<h3 class="mb-1 text-lg font-semibold ">
+							Usulan DUPAK Pasca Gangguan Aplikasi
+						</h3>
+						<time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+							Released on December 2nd, 2021
+						</time>
+						<p class="text-base font-normal text-gray-500 dark:text-gray-400">
+							Sehubungan dengan gangguan pada aplikasi SIjafung, Pejabat
+							Fungsional Statistisi yang ingin mengusulkan kegiatan periode
+							Januari - Desember 2021 masih diperbolehkan sampai ....{" "}
+							<span className="text-blue-700">
+								<Link href={"/"}>Baca Selengkapnya</Link>
+							</span>
+						</p>
+					</li>
+					<li class="ml-6 mb-10">
+						<span class="absolute flex items-center justify-center w-6 h-6 bg-white rounded-full -left-3 ring-8 ring-white">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								strokeWidth={1.5}
+								stroke="currentColor"
+								className="w-6 h-6"
+							>
+								<path
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"
+								/>
+							</svg>
+						</span>
+						<h3 class="mb-1 text-lg font-semibold ">
+							Usulan DUPAK Pasca Gangguan Aplikasi
+						</h3>
+						<time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+							Released on December 2nd, 2021
+						</time>
+						<p class="text-base font-normal text-gray-500 dark:text-gray-400">
+							Sehubungan dengan gangguan pada aplikasi SIjafung, Pejabat
+							Fungsional Statistisi yang ingin mengusulkan kegiatan periode
+							Januari - Desember 2021 masih diperbolehkan sampai ....{" "}
+							<span className="text-blue-700">
+								<Link href={"/"}>Baca Selengkapnya</Link>
+							</span>
+						</p>
+					</li>
+					<li class="ml-6 mb-10">
+						<span class="absolute flex items-center justify-center w-6 h-6 bg-white rounded-full -left-3 ring-8 ring-white">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								strokeWidth={1.5}
+								stroke="currentColor"
+								className="w-6 h-6"
+							>
+								<path
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"
+								/>
+							</svg>
+						</span>
+						<h3 class="mb-1 text-lg font-semibold ">
+							Usulan DUPAK Pasca Gangguan Aplikasi
+						</h3>
+						<time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+							Released on December 2nd, 2021
+						</time>
+						<p class="text-base font-normal text-gray-500 dark:text-gray-400">
+							Sehubungan dengan gangguan pada aplikasi SIjafung, Pejabat
+							Fungsional Statistisi yang ingin mengusulkan kegiatan periode
+							Januari - Desember 2021 masih diperbolehkan sampai ....{" "}
+							<span className="text-blue-700">
+								<Link href={"/"}>Baca Selengkapnya</Link>
+							</span>
+						</p>
+					</li>
+				</ol>
 			</div>
 		</main>
 	);
