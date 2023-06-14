@@ -3,13 +3,14 @@ import Link from "next/link";
 import Main from "./components/main";
 import TopNav from "./components/topNav";
 import { useEffect, useState } from "react";
+const server = process.env.SERVER;
 
 export default function Home() {
 	const [posts, setPosts] = useState([]);
 
 	useEffect(() => {
 		const getPosts = async () => {
-			const res = await fetch("/api/news");
+			const res = await fetch(`${server}/api/news`);
 			const data = await res.json();
 			setPosts(data.posts);
 		};
