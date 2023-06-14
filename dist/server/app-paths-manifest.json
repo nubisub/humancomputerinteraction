@@ -1,8 +1,0 @@
-{
-  "/page": "app/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/tentang/page": "app/tentang/page.js",
-  "/peraturan/page": "app/peraturan/page.js",
-  "/api/news/route": "app/api/news/route.js",
-  "/post/[slug]/page": "app/post/[slug]/page.js"
-}
