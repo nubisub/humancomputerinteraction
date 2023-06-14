@@ -6,10 +6,11 @@ export async function generateMetadata({ params }) {
 		title: params.slug + " | SI Jafung BPS",
 	};
 }
+const server = process.env.SERVER;
 
 const getPost = async (params) => {
 	const res = await fetch(
-		`${process.env.NEXT_PUBLIC_API_URL}/api/news/${params}`
+		`${server}/api/news/${params}`
 	);
 	return res.json();
 };
@@ -75,7 +76,7 @@ export default async function Page({ params }) {
 	);
 }
 export async function generateStaticParams() {
-	const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/news`);
+	const res = await fetch(`${server}/api/news`);
 	const posts = await res.json();
 	return posts.posts.map((post) => ({ slug: post.slug }));
 }

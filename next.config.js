@@ -11,6 +11,9 @@ const nextConfig = {
 	reactStrictMode: true,
 	distDir: "dist",
 	// output: 'export',
+	env: {
+		SERVER: process.env.SERVER,
+	},
 };
 
 
