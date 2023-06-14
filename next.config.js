@@ -9,7 +9,7 @@ const nextConfig = {
 		return config;
 	},
 	reactStrictMode: true,
-	distDir: "dist",
+	// distDir: "dist",
 	// output: 'export',
 	env: {
 		SERVER: process.env.SERVER,
