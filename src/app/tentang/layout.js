@@ -1,8 +1,16 @@
+import Main from "../components/main";
+
 
 export const metadata = {
-	title: "SI Jafung | Tentang",
+    title: "Tentang - SI Jafung | Badan Pusat Statistik",
+    description: "Sistem Informasi Jabatan Fungsional | Badan Pusat Statistik",
 };
 
-export default async function PrakomLayout({ children }) {
-	return <section>{children}</section>;
+export default function TentangLayout({ children }) {
+	return (
+		<>
+			<h1 className="text-3xl my-3 text-white">Tentang</h1>
+			<Main>{children}</Main>
+		</>
+	);
 }

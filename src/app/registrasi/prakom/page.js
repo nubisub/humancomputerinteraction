@@ -25,7 +25,7 @@ export default function Home() {
 		setIsOpen(true);
 	}
 	return (
-		<main className="absolute w-[calc(100vw-267px)] box-border p-10 px-20 left-[250px]">
+		<>
 			<h1 className="text-3xl my-3 text-white">
 				Permintaan Akun Calon Pranata Komputer
 			</h1>
@@ -77,6 +77,6 @@ export default function Home() {
 					</Tab.Group>
 				</div>
 			</div>
-		</main>
+		</>
 	);
 }
