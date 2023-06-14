@@ -4,35 +4,32 @@ export default function Home() {
 			<div className="flex flex-col">
 				<div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
 					<div className="inline-block min-w-full py-2 sm:px-6 lg:px-8">
-						<div className="overflow-hidden my-4 mb-8">
-							<div className="flex items-start justify-between">
-								<div className="text-xl font-semibold">
+						<div className="overflow-hidden my-2 mb-8">
+							<div className="flex items-start mb-2 justify-between">
+								<div className="text-2xl font-semibold">
 									Peraturan Pranata Komputer
 								</div>
-								<div className="relative flex items-center w-1/3 border-2 shadow-sm mb-3 h-10 rounded-xl  bg-white overflow-hidden items-center">
-									<div className="grid place-items-center h-full w-12 ml-2 text-gray-400">
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											className="h-6 w-6"
-											fill="none"
-											viewBox="0 0 24 24"
-											stroke="currentColor"
-										>
-											<path
-												stroke-linecap="round"
-												stroke-linejoin="round"
-												stroke-width="2"
-												d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-											/>
-										</svg>
-									</div>
-
+								<div className="flex items-center justify-center">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										strokeWidth={1.5}
+										stroke="currentColor"
+										className="w-6 h-6"
+									>
+										<path
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+										/>
+									</svg>
 									<input
-										className="peer h-full w-full outline-none text-sm text-gray-700 pr-8"
+										className="appearance-none block bg-gray-50 bg-opacity-60 border border-neutral-400  focus:outline-sky-600 focus:outline-1 rounded-xl  py-2 px-3 -ml-10 pl-12 transition-colors placeholder:text-sm"
 										type="text"
 										id="search"
-										placeholder="Cari Peraturan"
-									/>
+										placeholder="Cari Peraturan Prakom"
+									></input>
 								</div>
 							</div>
 							<table className="min-w-full text-left text-sm font-light">
@@ -60,7 +57,7 @@ export default function Home() {
 										<td>
 											<button
 												type="button"
-												class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-md text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+												class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
 											>
 												Download
 											</button>
@@ -77,7 +74,7 @@ export default function Home() {
 										<td>
 											<button
 												type="button"
-												class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-md text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+												class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
 											>
 												Download
 											</button>
@@ -94,7 +91,7 @@ export default function Home() {
 										<td>
 											<button
 												type="button"
-												class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-md text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+												class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
 											>
 												Download
 											</button>
@@ -111,7 +108,7 @@ export default function Home() {
 										<td>
 											<button
 												type="button"
-												class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-md text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+												class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
 											>
 												Download
 											</button>
@@ -128,7 +125,7 @@ export default function Home() {
 										<td>
 											<button
 												type="button"
-												class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-md text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+												class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
 											>
 												Download
 											</button>
@@ -145,7 +142,7 @@ export default function Home() {
 										<td>
 											<button
 												type="button"
-												class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-md text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+												class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
 											>
 												Download
 											</button>
@@ -162,7 +159,7 @@ export default function Home() {
 										<td>
 											<button
 												type="button"
-												class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-md text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+												class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
 											>
 												Download
 											</button>

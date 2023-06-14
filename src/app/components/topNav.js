@@ -1,7 +1,3 @@
-import { Fragment } from "react";
-import { Transition } from "@headlessui/react";
-import { Menu } from "@headlessui/react";
-
 export default function TopNav() {
 	return (
 		<div className="md:flex hidden justify-between items-center my-2 mb-8 z-50">

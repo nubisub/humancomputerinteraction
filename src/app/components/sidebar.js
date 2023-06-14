@@ -3,9 +3,16 @@ import Image from "next/image";
 import { Disclosure } from "@headlessui/react";
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 export default function Sidebar() {
+	const linkStyle =
+		"p-2.5 flex items-center rounded px-4 duration-300 cursor-pointer ";
+	const currentRoute = usePathname();
+	// styles for active and non-active links
+	const nonActiveStyle = linkStyle + " text-gray hover:bg-gray-200";
+	const activeStyle = linkStyle + " text-white bg-blue-500";
 	return (
-		<div className="md:block hidden fixed top-0 bottom-0 lg:left-0 p-2 w-[250px] overflow-y-auto text-center shadow bg-white text-gray-500 ">
+		<div className="md:block hidden fixed top-0 bottom-0 lg:left-0 p-2 px-3 w-[250px] overflow-y-auto text-center shadow bg-white text-gray-500 ">
 			{/* Logo Sijafung BPS */}
 			<Link href="/">
 				<div className="text-xl">
@@ -23,14 +30,15 @@ export default function Sidebar() {
 			<div className="mt-8 gap-y-2 flex flex-col">
 				{/* Beranda */}
 				<Link href="/">
-					<div className="p-2.5 flex items-center rounded px-4 duration-300 cursor-pointer hover:bg-gray-200 ">
+					<div className={currentRoute === "/" ? activeStyle : nonActiveStyle}>
 						<Image
 							src={"/logoMenu/logoBeranda.svg"}
 							width={25}
 							height={25}
 							alt={"logoBeranda.png"}
+							className="border rounded-md border-opacity-40"
 						/>
-						<span className="text-[15px] ml-3 ">Beranda</span>
+						<span className="text-[15px] ml-3 text-inherit">Beranda</span>
 					</div>
 				</Link>
 
@@ -55,21 +63,23 @@ export default function Sidebar() {
 								/>
 							</Disclosure.Button>
 
-							<Disclosure.Panel>
+							<Disclosure.Panel
+								className={"border-l ml-7 border-slate-400 border-opacity-50 "}
+							>
 								<Link
-									className="p-2.5 ml-4  flex items-center rounded px-4 duration-300 cursor-pointer hover:bg-gray-200 pl-6 mr-4"
+									className="p-2.5 ml-2 pl-2  flex items-center rounded px-4 duration-300 cursor-pointer hover:bg-gray-200 mr-4"
 									href="/registrasi/prakom"
 								>
 									<span className="text-[15px] ml-3 ">Calon Prakom</span>
 								</Link>
 								<Link
-									className="p-2.5 ml-4  flex items-center rounded px-4 duration-300 cursor-pointer hover:bg-gray-200 pl-6 mr-4"
+									className="p-2.5 ml-2 pl-2  flex items-center rounded px-4 duration-300 cursor-pointer hover:bg-gray-200 mr-4"
 									href="/registrasi/statistisi"
 								>
 									<span className="text-[15px] ml-3 ">Calon Statistisi</span>
 								</Link>
 								<Link
-									className="p-2.5 ml-4  flex items-center rounded px-4 duration-300 cursor-pointer hover:bg-gray-200 pl-6 mr-4"
+									className="p-2.5 ml-2 pl-2  flex items-center rounded px-4 duration-300 cursor-pointer hover:bg-gray-200 mr-4"
 									href="/registrasi/admin"
 								>
 									<span className="text-[15px] ml-3 ">Admin Instansi</span>
@@ -78,10 +88,10 @@ export default function Sidebar() {
 						</>
 					)}
 				</Disclosure>
-				
+
 				{/* Peraturan */}
 				<Link href="/peraturan">
-					<div className="p-2.5 flex items-center rounded px-4 duration-300 cursor-pointer hover:bg-gray-200 ">
+					<div className={currentRoute === "/peraturan" ? activeStyle : nonActiveStyle}>
 						<Image
 							src={"/logoMenu/logoPeraturan.svg"}
 							width={25}
@@ -93,7 +103,7 @@ export default function Sidebar() {
 				</Link>
 				{/* Tentang */}
 				<Link href="/tentang">
-					<div className="p-2.5 flex items-center rounded px-4 duration-300 cursor-pointer hover:bg-gray-200 ">
+					<div className={currentRoute === "/tentang" ? activeStyle : nonActiveStyle}>
 						<Image
 							src={"/logoMenu/logoTentang.svg"}
 							width={25}
