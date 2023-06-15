@@ -179,7 +179,7 @@ export default function Admin() {
 				</div>
 
 				<h3 className="px-3 font-semibold text-lg mt-4">Data Unit Kerja</h3>
-				<div className="md:flex flex-col mb-6 gap-y-1 py-2">
+				<div className="md:flex flex-col  gap-y-1 py-2">
 					{/* Instansi */}
 					<div className="w-full block px-3">
 						<label className="block mb-1 text-sm " for="instansi">
@@ -259,7 +259,7 @@ export default function Admin() {
 					</div>
 				</div>
 
-				<div className="flex justify-center">
+					<div className="flex justify-center">
 					<button
 						className="bg-sky-600 hover:bg-sky-700 text-white font-semibold w-full mx-3 py-2 px-4 rounded-md"
 						type="submit"

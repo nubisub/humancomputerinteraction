@@ -50,12 +50,12 @@ export default function Home() {
 											1
 										</td>
 										<td className="whitespace-nowrap px-6 py-4">
-											Jabatan Fungsional Pranata Komputer dan Angka Kreditnya
+											Jabatan Fungsional Statistisi dan Angka Kreditnya
 										</td>
 										<td>
 											<button
 												type="button"
-												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#228be6] focus:outline-none dark:focus:ring-blue-800"
+												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#1676ca] focus:outline-none dark:focus:ring-blue-800"
 											>
 												Download
 											</button>
@@ -66,13 +66,13 @@ export default function Home() {
 											2
 										</td>
 										<td className="whitespace-nowrap px-6 py-4">
-											Petunjuk Pelaksanaan Jabatan Fungsional Pranata Komputer
-											dan Angka Kreditnya
+											Ketentuan Pelaksanaan Permenpan-RB (Jabatan Fungsional
+											Statistisi dan Angka Kreditnya
 										</td>
 										<td>
 											<button
 												type="button"
-												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#228be6] focus:outline-none dark:focus:ring-blue-800"
+												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#1676ca] focus:outline-none dark:focus:ring-blue-800"
 											>
 												Download
 											</button>
@@ -83,13 +83,13 @@ export default function Home() {
 											3
 										</td>
 										<td className="whitespace-nowrap px-6 py-4">
-											Petunjuk Teknis Penilaian Pranata Komputer dan Angka
-											Kreditnya
+											Petunjuk Teknis Penilaian Angka Kredit Jabatan Fungsional
+											Statistisi
 										</td>
 										<td>
 											<button
 												type="button"
-												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#228be6] focus:outline-none dark:focus:ring-blue-800"
+												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#1676ca] focus:outline-none dark:focus:ring-blue-800"
 											>
 												Download
 											</button>
@@ -100,13 +100,12 @@ export default function Home() {
 											4
 										</td>
 										<td className="whitespace-nowrap px-6 py-4">
-											Petunjuk Teknis Penilaian Pranata Komputer dan Angka
-											Kreditnya
+											Petunjuk Teknis Pengangkatan Jabatan Fungsional Statistisi
 										</td>
 										<td>
 											<button
 												type="button"
-												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#228be6] focus:outline-none dark:focus:ring-blue-800"
+												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#1676ca] focus:outline-none dark:focus:ring-blue-800"
 											>
 												Download
 											</button>
@@ -117,13 +116,13 @@ export default function Home() {
 											5
 										</td>
 										<td className="whitespace-nowrap px-6 py-4">
-											Petunjuk Teknis Penilaian Pranata Komputer dan Angka
-											Kreditnya
+											Petunjuk Teknis Tim Penilai Angka Kredit Jabatan
+											Fungsional Statistisi
 										</td>
 										<td>
 											<button
 												type="button"
-												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#228be6] focus:outline-none dark:focus:ring-blue-800"
+												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#1676ca] focus:outline-none dark:focus:ring-blue-800"
 											>
 												Download
 											</button>
@@ -134,13 +133,12 @@ export default function Home() {
 											6
 										</td>
 										<td className="whitespace-nowrap px-6 py-4">
-											Petunjuk Teknis Penilaian Pranata Komputer dan Angka
-											Kreditnya
+											Pedoman Penyusunan Formasi Statistisi
 										</td>
 										<td>
 											<button
 												type="button"
-												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#228be6] focus:outline-none dark:focus:ring-blue-800"
+												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#1676ca] focus:outline-none dark:focus:ring-blue-800"
 											>
 												Download
 											</button>
@@ -151,13 +149,12 @@ export default function Home() {
 											7
 										</td>
 										<td className="whitespace-nowrap px-6 py-4">
-											Petunjuk Teknis Penilaian Pranata Komputer dan Angka
-											Kreditnya
+											Tunjangan Jabatan Fungsional Statistisi
 										</td>
 										<td>
 											<button
 												type="button"
-												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#228be6] focus:outline-none dark:focus:ring-blue-800"
+												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#1676ca] focus:outline-none dark:focus:ring-blue-800"
 											>
 												Download
 											</button>
@@ -168,13 +165,13 @@ export default function Home() {
 											8
 										</td>
 										<td className="whitespace-nowrap px-6 py-4">
-											Petunjuk Teknis Penilaian Pranata Komputer dan Angka
-											Kreditnya
+											Petunjuk Pelaksanaan Jabatan Fungsional Statistisi dan
+											Angka Kreditnya
 										</td>
 										<td>
 											<button
 												type="button"
-												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#228be6] focus:outline-none dark:focus:ring-blue-800"
+												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#1676ca] focus:outline-none dark:focus:ring-blue-800"
 											>
 												Download
 											</button>
@@ -191,7 +188,7 @@ export default function Home() {
 										<td>
 											<button
 												type="button"
-												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#228be6] focus:outline-none dark:focus:ring-blue-800"
+												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#1676ca] focus:outline-none dark:focus:ring-blue-800"
 											>
 												Download
 											</button>
@@ -208,7 +205,7 @@ export default function Home() {
 										<td>
 											<button
 												type="button"
-												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#228be6] focus:outline-none dark:focus:ring-blue-800"
+												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#1676ca] focus:outline-none dark:focus:ring-blue-800"
 											>
 												Download
 											</button>

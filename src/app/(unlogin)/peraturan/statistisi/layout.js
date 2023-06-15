@@ -1,4 +1,4 @@
-import Main from "../../components/main";
+import Main from "../../../components/main";
 
 export const metadata = {
 	title: "Peraturan Statistisi - SI Jafung | Badan Pusat Statistik",

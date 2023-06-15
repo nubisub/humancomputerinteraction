@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function TopNav() {
 	return (
 		<div className="md:flex hidden justify-between items-center my-2 mb-8 z-50">
@@ -32,12 +34,13 @@ export default function TopNav() {
 
 			{/* Akun dan Notifikasi */}
 			<div className="flex gap-x-4 items-center justify-center">
-				<button
+				<Link
+					href={"/auth"}
 					type="button"
 					className="font-semibold px-8  text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:outline-none rounded-lg text-sm py-2.5 text-center inline-flex items-center  dark:bg-white dark:border-gray-700 dark:text-gray-900 dark:hover:bg-gray-200"
 				>
 					Login
-				</button>
+				</Link>
 				{/* <Menu as="div" className="relative inline-block text-left">
 					<div>
 						<Menu.Button className="inline-flex w-full justify-center rounded-full bg-black bg-opacity-20 p-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">

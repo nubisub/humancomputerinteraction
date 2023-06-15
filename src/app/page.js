@@ -1,6 +1,9 @@
 import Link from "next/link";
 import Main from "./components/main";
 import TopNav from "./components/topNav";
+import MobileTopNav from "@/app/components/mobileTopNav";
+import Sidebar from "@/app/components/sidebar";
+import Footer from "@/app/components/footer";
 const server = process.env.SERVER;
 
 const getPosts = async () => {
@@ -23,7 +26,13 @@ export default async function Home() {
 	const posts = await getPosts();
 	return (
 		<>
-			<TopNav />
+			<MobileTopNav />
+				<Sidebar />
+
+			<main className="md:absolute md:w-[calc(100vw-267px)] w-screen box-border md:pt-5 p-1 px-2 pt-0.5 left-[250px]">
+					<div className="md:mx-20 md:mb-24 mb-4">
+
+						<TopNav />
 			<Main>
 				<h3 class="md:text-3xl text-xl md:mx-0 mx-4 text-gray-700 font-semibold  md:ml-3 mb-4 mt-4">
 					Sistem Informasi Jabatan Fungsional - BPS
@@ -65,7 +74,7 @@ export default async function Home() {
 									</time>
 									<p class="text-base md:block hidden font-normal text-gray-500">
 										{post.frontMatter.summary} ....{" "}
-										<span className="text-blue-700">
+										<span className="text-blue-700 hover:text-blue-400">
 											<Link href={`/post/${post.slug}`}>Baca Selengkapnya</Link>
 										</span>
 									</p>
@@ -74,6 +83,11 @@ export default async function Home() {
 					</ol>
 				</ol>
 			</Main>
+
+					</div>
+					<Footer />
+				</main>
+
 		</>
 	);
 }

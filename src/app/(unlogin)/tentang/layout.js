@@ -1,4 +1,4 @@
-import Main from "../components/main";
+import Main from "../../components/main";
 
 export const metadata = {
 	title: "Tentang - SI Jafung | Badan Pusat Statistik",

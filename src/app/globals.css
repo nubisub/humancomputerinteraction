@@ -15,7 +15,7 @@ main {
 		var(--main-background) 400px,
 		var(--main-background) 100%
 	);
-	min-height: 102vh;
+	min-height: 100vh;
 }
 .sidebar {
 	background-color: var(--sidebar-background);

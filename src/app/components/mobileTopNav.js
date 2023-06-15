@@ -88,7 +88,7 @@ export default function MobileTopNav() {
 									<ChevronRightIcon
 										className={`${
 											open ? "rotate-90 transform ml-1" : ""
-										} h-5 w-5 text-purple-500 ml-1`}
+										} h-5 w-5  ml-1`}
 									/>
 								</Disclosure.Button>
 
@@ -126,7 +126,7 @@ export default function MobileTopNav() {
 									<ChevronRightIcon
 										className={`${
 											open ? "rotate-90 transform ml-1" : ""
-										} h-5 w-5 text-purple-500 ml-1`}
+										} h-5 w-5  ml-1`}
 									/>
 								</Disclosure.Button>
 
