@@ -10,7 +10,7 @@ function classNames(...classes) {
 export default function Home() {
 	return (
 		<>
-			<div className="w-full mx-auto px-2 py-4 sm:px-0">
+			<div className="w-full mx-auto px-2 py-4 sm:px-0 md:mt-0 mt-2">
 				<Tab.Group>
 					<Tab.List className="flex max-w-xl mx-auto space-x-1 rounded-xl bg-blue-900/20 p-1">
 						<Tab
