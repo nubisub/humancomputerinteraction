@@ -2,14 +2,12 @@ export default function Home() {
 	return (
 		<>
 			<div className="flex flex-col">
-				<div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
+				<div className="sm:overflow-x-auto overflow-x-scroll  sm:-mx-6 lg:-mx-8">
 					<div className="inline-block min-w-full py-2 sm:px-6 lg:px-8">
 						<div className="overflow-hidden my-2 mb-8">
 							<div className="flex items-start mb-2 justify-between">
-								<div className="text-2xl font-semibold">
-									Peraturan Pranata Komputer
-								</div>
-								<div className="flex items-center justify-center">
+								<div className="text-2xl font-semibold md:block hidden"></div>
+								<div className="flex items-center justify-center md:ml-0 ml-4">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										fill="none"
@@ -57,7 +55,7 @@ export default function Home() {
 										<td>
 											<button
 												type="button"
-												class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#228be6] focus:outline-none dark:focus:ring-blue-800"
 											>
 												Download
 											</button>
@@ -74,7 +72,7 @@ export default function Home() {
 										<td>
 											<button
 												type="button"
-												class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#228be6] focus:outline-none dark:focus:ring-blue-800"
 											>
 												Download
 											</button>
@@ -91,7 +89,7 @@ export default function Home() {
 										<td>
 											<button
 												type="button"
-												class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#228be6] focus:outline-none dark:focus:ring-blue-800"
 											>
 												Download
 											</button>
@@ -99,7 +97,7 @@ export default function Home() {
 									</tr>
 									<tr className="border-b dark:border-neutral-500">
 										<td className="whitespace-nowrap px-6 py-4 font-medium">
-											3
+											4
 										</td>
 										<td className="whitespace-nowrap px-6 py-4">
 											Petunjuk Teknis Penilaian Pranata Komputer dan Angka
@@ -108,7 +106,7 @@ export default function Home() {
 										<td>
 											<button
 												type="button"
-												class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#228be6] focus:outline-none dark:focus:ring-blue-800"
 											>
 												Download
 											</button>
@@ -116,7 +114,7 @@ export default function Home() {
 									</tr>
 									<tr className="border-b dark:border-neutral-500">
 										<td className="whitespace-nowrap px-6 py-4 font-medium">
-											3
+											5
 										</td>
 										<td className="whitespace-nowrap px-6 py-4">
 											Petunjuk Teknis Penilaian Pranata Komputer dan Angka
@@ -125,7 +123,7 @@ export default function Home() {
 										<td>
 											<button
 												type="button"
-												class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#228be6] focus:outline-none dark:focus:ring-blue-800"
 											>
 												Download
 											</button>
@@ -133,7 +131,7 @@ export default function Home() {
 									</tr>
 									<tr className="border-b dark:border-neutral-500">
 										<td className="whitespace-nowrap px-6 py-4 font-medium">
-											3
+											6
 										</td>
 										<td className="whitespace-nowrap px-6 py-4">
 											Petunjuk Teknis Penilaian Pranata Komputer dan Angka
@@ -142,7 +140,7 @@ export default function Home() {
 										<td>
 											<button
 												type="button"
-												class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#228be6] focus:outline-none dark:focus:ring-blue-800"
 											>
 												Download
 											</button>
@@ -150,7 +148,7 @@ export default function Home() {
 									</tr>
 									<tr className="border-b dark:border-neutral-500">
 										<td className="whitespace-nowrap px-6 py-4 font-medium">
-											3
+											7
 										</td>
 										<td className="whitespace-nowrap px-6 py-4">
 											Petunjuk Teknis Penilaian Pranata Komputer dan Angka
@@ -159,7 +157,58 @@ export default function Home() {
 										<td>
 											<button
 												type="button"
-												class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#228be6] focus:outline-none dark:focus:ring-blue-800"
+											>
+												Download
+											</button>
+										</td>
+									</tr>
+									<tr className="border-b dark:border-neutral-500">
+										<td className="whitespace-nowrap px-6 py-4 font-medium">
+											8
+										</td>
+										<td className="whitespace-nowrap px-6 py-4">
+											Petunjuk Teknis Penilaian Pranata Komputer dan Angka
+											Kreditnya
+										</td>
+										<td>
+											<button
+												type="button"
+												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#228be6] focus:outline-none dark:focus:ring-blue-800"
+											>
+												Download
+											</button>
+										</td>
+									</tr>
+									<tr className="border-b dark:border-neutral-500">
+										<td className="whitespace-nowrap px-6 py-4 font-medium">
+											9
+										</td>
+										<td className="whitespace-nowrap px-6 py-4">
+											Petunjuk Teknis Penilaian Pranata Komputer dan Angka
+											Kreditnya
+										</td>
+										<td>
+											<button
+												type="button"
+												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#228be6] focus:outline-none dark:focus:ring-blue-800"
+											>
+												Download
+											</button>
+										</td>
+									</tr>
+									<tr className="border-b dark:border-neutral-500">
+										<td className="whitespace-nowrap px-6 py-4 font-medium">
+											10
+										</td>
+										<td className="whitespace-nowrap px-6 py-4">
+											Petunjuk Teknis Penilaian Pranata Komputer dan Angka
+											Kreditnya
+										</td>
+										<td>
+											<button
+												type="button"
+												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#228be6] focus:outline-none dark:focus:ring-blue-800"
 											>
 												Download
 											</button>
@@ -205,7 +254,7 @@ export default function Home() {
 									<a
 										href="#"
 										aria-current="page"
-										className="relative z-10 inline-flex items-center bg-indigo-600 px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+										className="relative z-10 inline-flex items-center bg-[#228be6] px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
 									>
 										1
 									</a>

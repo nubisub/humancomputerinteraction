@@ -3,23 +3,20 @@
 @tailwind utilities;
 
 :root {
-  --main-background: #F8F9FE;
-  --sidebar-background: #FFFFFF;
-  --blue-background: #5e72e4;
+	--main-background: #f8f9fe;
+	--sidebar-background: #ffffff;
+	--blue-background: #228be6;
 }
-
 
 main {
-  background: linear-gradient(
-    var(--blue-background) 0%,
-    var(--blue-background) 400px,
-    var(--main-background) 400px,
-    var(--main-background) 100%
-  );
-  min-height: 102vh;
+	background: linear-gradient(
+		var(--blue-background) 0%,
+		var(--blue-background) 400px,
+		var(--main-background) 400px,
+		var(--main-background) 100%
+	);
+	min-height: 102vh;
 }
-.sidebar{
-  background-color: var(--sidebar-background);
-  }
-
-
+.sidebar {
+	background-color: var(--sidebar-background);
+}

@@ -4,7 +4,7 @@ import TopNav from "./components/topNav";
 const server = process.env.SERVER;
 
 const getPosts = async () => {
-	const res = await fetch(`${server}/api/news`, { next: { revalidate: 7200 } });
+	const res = await fetch(`${server}/api/news`);
 	const data = await res.json();
 	const posts = await data;
 	return posts.posts;
@@ -25,19 +25,19 @@ export default async function Home() {
 		<>
 			<TopNav />
 			<Main>
-				<h3 class="text-3xl text-gray-700 font-semibold  ml-3 mb-4 mt-4">
+				<h3 class="md:text-3xl text-xl md:mx-0 mx-4 text-gray-700 font-semibold  md:ml-3 mb-4 mt-4">
 					Sistem Informasi Jabatan Fungsional - BPS
 				</h3>
-				<hr className="ml-3 border-slate-400"></hr>
-				<h3 class="text-xl text-gray-700 font-semibold  ml-3 my-8 mt-4">
+				<hr className="md:ml-3 mx-3 border-slate-400"></hr>
+				<h3 class="md:text-xl  mx-4 text-md text-gray-700 font-semibold  md:ml-3 md:my-8 m-3 mt-4">
 					Berita Terkini
 				</h3>
 
 				<ol class="relative">
-					<ol class="relative border-l ml-8 border-gray-200 dark:border-gray-700">
+					<ol class="relative border-l md:ml-8 ml-8 mr-4 border-gray-200 dark:border-gray-700">
 						{posts &&
 							posts.map((post) => (
-								<li key={post.name} class="ml-6 mb-10">
+								<li key={post.name} class="ml-6 md:mb-10 mb-6">
 									<span class="absolute mt-1 flex items-center justify-center w-6 h-6 bg-white rounded-full -left-3 ring-8 ring-white">
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
@@ -56,14 +56,14 @@ export default async function Home() {
 									</span>
 									<Link
 										href={`/post/${post.slug}`}
-										className="mb-8 text-xl font-semibold hover:text-blue-700"
+										className="mb-8 md:text-xl font-semibold hover:text-[#228be6]"
 									>
 										<span className="py-2">{post.frontMatter.title}</span>
 									</Link>
-									<time className="block mb-2 mt-1 text-sm font-medium leading-none text-gray-600">
+									<time className="block mb-2 mt-1 md:text-sm text-xs font-medium leading-none text-gray-600">
 										{parseTime(post.frontMatter.date)}
 									</time>
-									<p class="text-base font-normal text-gray-500">
+									<p class="text-base md:block hidden font-normal text-gray-500">
 										{post.frontMatter.summary} ....{" "}
 										<span className="text-blue-700">
 											<Link href={`/post/${post.slug}`}>Baca Selengkapnya</Link>

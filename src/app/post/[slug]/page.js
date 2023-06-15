@@ -38,7 +38,7 @@ export default async function Page({ params }) {
 
 	return (
 		<>
-			<article className="prose min-w-full py-3">
+			<article className="prose min-w-full py-3 md:px-4 px-2">
 				<MDXRemote source={content} />
 				<div className="flex items-center gap-2 my-1">
 					<svg
@@ -61,7 +61,7 @@ export default async function Page({ params }) {
 						{parseTime(post.frontMatter.date)}
 					</time>
 				</div>
-				<h1 className="my-2 leading-tight ">{post.frontMatter.title}</h1>
+				<h1 className="my-2 text-lg md:text-4xl md:leading-tight leading-tight">{post.frontMatter.title}</h1>
 				<div className="mt-4 py-2 flex items-center justify-between">
 					<div>
 						<Link className="no-underline" href={"https://github.com/nubisub"}>

@@ -42,12 +42,13 @@ const pangkat = [
 	"Pembina Utama (IV/E)",
 ];
 const jabatan = [
-	"Pranata Komputer Muda",
-	"Pranata Komputer Muda Tingkat I",
-	"Pranata Komputer Madya",
-	"Pranata Komputer Madya Tingkat I",
-	"Pranata Komputer Utama",
-	"Pranata Komputer Utama Tingkat I",
+	"Statistisi Pelaksana",
+	"Statistisi Pertama",
+	"Statistisi Muda",
+	"Statistisi Madya",
+	"Statistisi Utama",
+	"Statistisi Penyelia",
+	"Statistisi Pelaksana Lanjutan",
 ];
 const instansi = [
 	"Badan Pusat Statistik",

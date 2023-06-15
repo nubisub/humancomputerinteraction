@@ -9,7 +9,6 @@ const jabatan = [
 	"Pranata Komputer Utama",
 	"Pranata Komputer Utama Tingkat I",
 ];
-
 export default function BPS() {
     let [isOpen, setIsOpen] = useState(false);
 
@@ -23,14 +22,13 @@ export default function BPS() {
 	return (
 		<div className="py-2">
 			<h3 className="px-3 font-semibold text-lg">Data Diri Dan Pekerjaan</h3>
-			<form className="md:flex flex-col mb-6 gap-y-1 py-2">
+			<div className="md:flex flex-col mb-6 gap-y-1 py-2">
 				{/* NIP */}
 				<div className="w-full block px-3">
 					<label className="block mb-1 text-sm" for="nip">
 						Nomor Induk Pegawai
 					</label>
 					<input
-						required
 						className="appearance-none block w-full bg-gray-50 bg-opacity-60 border border-neutral-400  focus:outline-sky-600 focus:outline-1 rounded-md py-2 px-3 mb-3 transition-colors placeholder:text-sm"
 						id="nip"
 						type="text"
@@ -43,7 +41,6 @@ export default function BPS() {
 						Nama Lengkap
 					</label>
 					<input
-						required
 						className="appearance-none block w-full bg-gray-50 bg-opacity-60 border border-neutral-400  focus:outline-sky-600 focus:outline-1 rounded-md py-2 px-3 mb-3 transition-colors placeholder:text-sm"
 						id="grid-first-name"
 						type="text"
@@ -51,37 +48,35 @@ export default function BPS() {
 					></input>
 				</div>
 
-				{/* Jabata Yang Diajukan */}
+				{/* Alamat Kantor */}
 				<div className="w-full block px-3">
 					<label className="block mb-1 text-sm " for="tingkat-pendidikan">
-						Jabatan Fungsional
+						Alamt
 					</label>
 					<select
-						disabled
-						required
 						className="appearance-none block w-full bg-gray-50 bg-opacity-60 border border-neutral-400  focus:outline-sky-600 focus:outline-1 rounded-md py-2 px-3 mb-3 transition-colors placeholder:text-sm text-sm"
 						id="tingkat-pendidikan"
 						type="text"
 						placeholder="Masukkan Jenis Kelamin"
 					>
-						<option value="Pranata Komputer">Pranata Komputer</option>
+						{jabatan.map((jabatan) => (
+							<option key={jabatan} value={jabatan}>
+								{jabatan}
+							</option>
+						))}
 					</select>
 				</div>
 				{/* Jabata Yang Diajukan */}
 				<div className="w-full block px-3">
 					<label className="block mb-1 text-sm " for="tingkat-pendidikan">
-						Jenjang Jabatan Fungsional
+						Jabatan Yang Diajukan
 					</label>
 					<select
-						required
 						className="appearance-none block w-full bg-gray-50 bg-opacity-60 border border-neutral-400  focus:outline-sky-600 focus:outline-1 rounded-md py-2 px-3 mb-3 transition-colors placeholder:text-sm text-sm"
 						id="tingkat-pendidikan"
 						type="text"
 						placeholder="Masukkan Jenis Kelamin"
 					>
-						<option selected disabled  value="">
-							Pilih Jenjang Jabatan Fungsional
-						</option>
 						{jabatan.map((jabatan) => (
 							<option key={jabatan} value={jabatan}>
 								{jabatan}
@@ -98,13 +93,13 @@ export default function BPS() {
 						required
 						className="appearance-none block w-full bg-gray-50 bg-opacity-60 border border-neutral-400  focus:outline-sky-600 focus:outline-1 rounded-md py-2 px-3 mb-3 transition-colors placeholder:text-sm"
 						id="tempat-lahir"
-						type="email"
+						type="text"
 						placeholder="Masukkan Alamat Email"
 					></input>
 				</div>
 				<div className="flex justify-center">
 					<button
-						// onClick={openModal}
+						onClick={openModal}
 						className="bg-sky-600 hover:bg-sky-700 text-white font-semibold w-full mx-3 py-2 px-4 rounded-md"
 						type="submit"
 					>
@@ -164,7 +159,7 @@ export default function BPS() {
 						</Dialog>
 					</Transition>
 				</div>
-			</form>
+			</div>
 		</div>
 	);
 }

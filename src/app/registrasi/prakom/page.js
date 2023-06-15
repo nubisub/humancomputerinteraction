@@ -3,12 +3,7 @@ import { Tab } from "@headlessui/react";
 import { useState } from "react";
 import BPS from "./BPS";
 import NonBPS from "./NonBPS";
-import Breadcrumbs from "./Breadcrumbs";
-
-const navigation = [
-	{ name: "Registrasi", href: "/", current: true },
-	{ name: "Pranata Komputer", href: "/registrasi/prakom", current: true },
-];
+import Main from "@/app/components/main";
 
 function classNames(...classes) {
 	return classes.filter(Boolean).join(" ");
@@ -26,18 +21,21 @@ export default function Home() {
 	}
 	return (
 		<>
-			<h1 className="text-3xl my-3 text-white">
-				Permintaan Akun Calon Pranata Komputer
+			<h1 className="md:text-3xl text-2xl md:mx-0 mx-2 font-semibold md:my-3 my-4 mb-1 text-white">
+				Registrasi Akun
 			</h1>
-			<Breadcrumbs props={navigation} />
-			<div className="flex flex-col bg-white px-16 py-8 rounded-lg my-4 shadow-lg">
-				<div className="w-full mx-auto px-2 py-4 sm:px-0">
+			<h2 className="text-md   md:mx-0 mx-2 md:mb-8 mb-3 text-white">
+				Permintaan Akun Calon Pranata Komputer
+			</h2>
+			{/* <Breadcrumbs props={navigation} /> */}
+			<Main>
+				<div className="w-full mx-auto px-0 md:mt-0 mt-2 py-4 sm:px-0">
 					<Tab.Group>
 						<Tab.List className="flex max-w-xl mx-auto space-x-1 rounded-xl bg-blue-900/20 p-1">
 							<Tab
 								className={({ selected }) =>
 									classNames(
-										"w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-gray-800",
+										"w-full rounded-lg py-2.5 md:text-sm text-xs  font-medium leading-5 text-gray-800",
 										"ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2",
 										selected
 											? "bg-white shadow font-semibold ring-2 ring-opacity-60 ring-offset-2 ring-offset-blue-400"
@@ -45,13 +43,16 @@ export default function Home() {
 									)
 								}
 							>
-								Registrasi Calon Prakom Non-BPS
+								<span className="hidden md:inline">
+									Registrasi Calon Prakom Non-BPS
+								</span>
+								<span className="inline md:hidden">Calon Prakom Non-BPS</span>
 							</Tab>
 
 							<Tab
 								className={({ selected }) =>
 									classNames(
-										"w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-gray-800",
+										"w-full rounded-lg py-2.5 md:text-sm text-xs font-medium leading-5 text-gray-800",
 										"ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2",
 										selected
 											? "bg-white shadow font-semibold ring-2 ring-opacity-60 ring-offset-2 ring-offset-blue-400"
@@ -59,7 +60,10 @@ export default function Home() {
 									)
 								}
 							>
-								Registrasi Calon Prakom BPS
+								<span className="hidden md:inline">
+									Registrasi Calon Prakom BPS
+								</span>
+								<span className="inline md:hidden">Calon Prakom BPS</span>
 							</Tab>
 						</Tab.List>
 						<Tab.Panels className="mt-2">
@@ -76,7 +80,7 @@ export default function Home() {
 						</Tab.Panels>
 					</Tab.Group>
 				</div>
-			</div>
+			</Main>
 		</>
 	);
 }
