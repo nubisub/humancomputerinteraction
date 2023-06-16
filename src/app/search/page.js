@@ -10,11 +10,7 @@ import queryString from "query-string";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 import Router from "next/router";
-export async function generateMetadata({ params }) {
-	return {
-		title: "Pencarian" + " - SI Jafung | Badan Pusat Statistik",
-	};
-}
+
 const getPosts = async (query) => {
 	const res = await fetch(`${server}/api/search/${query}`);
 	const data = await res.json();
