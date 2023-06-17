@@ -2,15 +2,15 @@
 import { useEffect, useState } from "react";
 
 const dataRaw = [
-	"Jabatan Fungsional Pranata Komputer dan Angka Kreditnya	Download",
-	"Pelaksanaan Jabatan Fungsional Pranata Komputer dan Angka Kreditnya	Download",
-	"Penilaian Pranata Komputer dan Angka Kreditnya	Download",
-	"Tunjangan Jabatan Fungsional Pranata Komputer	Download",
-	"PERMENPAN No 32 Tahun 2020 Tentang Jabatan Fungsional Pranata Komputer	Download",
-	"Petunjuk Teknis Penilaian Angka Kredit JF Prakom Nomor 2 Tahun 2021	Download",
-	"Petunjuk Teknis Penilaian Pranata Komputer dan Angka Kreditnya	Download",
-	"Petunjuk Teknis Penilaian Pranata Komputer dan Angka Kreditnya	Download",
-	"Petunjuk Teknis Penilaian Pranata Komputer dan Angka Kreditnya	Download",
+	"Jabatan Fungsional Pranata Komputer dan Angka Kreditnya",
+	"Pelaksanaan Jabatan Fungsional Pranata Komputer dan Angka Kreditnya",
+	"Penilaian Pranata Komputer dan Angka Kreditnya",
+	"Tunjangan Jabatan Fungsional Pranata Komputer",
+	"PERMENPAN No 32 Tahun 2020 Tentang Jabatan Fungsional Pranata Komputer",
+	"Petunjuk Teknis Penilaian Angka Kredit JF Prakom Nomor 2 Tahun 2021",
+	"Petunjuk Teknis Penilaian Pranata Komputer dan Angka Kreditnya",
+	"Petunjuk Teknis Penilaian Pranata Komputer dan Angka Kreditnya",
+	"Petunjuk Teknis Penilaian Pranata Komputer dan Angka Kreditnya",
 	"Petunjuk Teknis Penilaian Pranata Komputer dan Angka Kreditnya",
 ];
 
