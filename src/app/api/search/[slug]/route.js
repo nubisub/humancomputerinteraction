@@ -19,6 +19,9 @@ export async function GET(request, { params }) {
 	const filteredPosts = res.posts.filter((post) => {
 		return post.title.toLowerCase().includes(slug.toLowerCase()) || post.summary.toLowerCase().includes(slug.toLowerCase());
 	});
+	if (filteredPosts.length === 0) {
+		return NextResponse.json({ error: "Not found" }, { status: 404 });
+	}	
 
 	return NextResponse.json(filteredPosts);
 }
