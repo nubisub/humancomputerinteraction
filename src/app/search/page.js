@@ -67,6 +67,14 @@ export default function Home() {
 	}, [searchParams]);
 
 	const searchHandler = (e) => {
+		if (preQuery === "") {
+			e.preventDefault();
+			return;
+		}
+		if (preQuery === query) {
+			e.preventDefault();
+			return;
+		}
 		setLoading(true);
 		e.preventDefault();
 		setQuery(preQuery);
@@ -172,9 +180,9 @@ export default function Home() {
 									<span class="sr-only">Loading...</span>
 								</div>
 							</div>
-						) : (
-							<ol class="relative h-fit min-h-96 ">
-								<ol class="relative border-l md:ml-8 ml-8 mr-4 border-gray-200 dark:border-gray-700  mt-6">
+						) : !notFound ? (
+							<ol className="relative mb-6 min-h-[24rem]">
+								<ol className="relative border-l md:ml-8 ml-8 mr-4 border-gray-200 dark:border-gray-700  mt-6">
 									{posts.map((post) => (
 										<li key={post.title} class="ml-6 md:mb-10 mb-6">
 											<span class="absolute mt-1 flex items-center justify-center w-6 h-6 bg-white rounded-full -left-3 ring-8 ring-white">
@@ -214,8 +222,7 @@ export default function Home() {
 									))}
 								</ol>
 							</ol>
-						)}
-						{notFound ? (
+						) : (
 							<div className="flex justify-center items-center h-96">
 								<div className="flex flex-col items-center text-gray-400">
 									<svg
@@ -238,7 +245,7 @@ export default function Home() {
 									</p>
 								</div>
 							</div>
-						) : null}
+						)}
 					</Main>
 				</div>
 				<Footer />
