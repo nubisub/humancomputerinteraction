@@ -158,6 +158,15 @@ export default function MobileTopNav() {
 							Tentang
 						</Link>
 					</li>
+					<li>
+						<Link
+							onClick={handleClick}
+							className="md:p-4 py-2 block"
+							href="/auth"
+						>
+							Login
+						</Link>
+					</li>
 				</ul>
 			</div>
 		</nav>

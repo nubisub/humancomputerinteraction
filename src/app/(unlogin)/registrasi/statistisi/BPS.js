@@ -2,12 +2,13 @@ import { Dialog, Transition, Tab} from "@headlessui/react";
 import { Fragment, useState } from "react";
 
 const jabatan = [
-	"Pranata Komputer Muda",
-	"Pranata Komputer Muda Tingkat I",
-	"Pranata Komputer Madya",
-	"Pranata Komputer Madya Tingkat I",
-	"Pranata Komputer Utama",
-	"Pranata Komputer Utama Tingkat I",
+	"Statistisi Pelaksana",
+	"Statistisi Pertama",
+	"Statistisi Muda",
+	"Statistisi Madya",
+	"Statistisi Utama",
+	"Statistisi Penyelia",
+	"Statistisi Pelaksana Lanjutan",
 ];
 export default function BPS() {
     let [isOpen, setIsOpen] = useState(false);
@@ -51,25 +52,21 @@ export default function BPS() {
 				{/* Alamat Kantor */}
 				<div className="w-full block px-3">
 					<label className="block mb-1 text-sm " for="tingkat-pendidikan">
-						Alamt
+						Jabatan Fungsional
 					</label>
-					<select
+					<input
+						disabled
+						defaultValue={"Statistisi"}
 						className="appearance-none block w-full bg-gray-50 bg-opacity-60 border border-neutral-400  focus:outline-sky-600 focus:outline-1 rounded-md py-2 px-3 mb-3 transition-colors placeholder:text-sm text-sm"
 						id="tingkat-pendidikan"
 						type="text"
 						placeholder="Masukkan Jenis Kelamin"
-					>
-						{jabatan.map((jabatan) => (
-							<option key={jabatan} value={jabatan}>
-								{jabatan}
-							</option>
-						))}
-					</select>
+					></input>
 				</div>
 				{/* Jabata Yang Diajukan */}
 				<div className="w-full block px-3">
 					<label className="block mb-1 text-sm " for="tingkat-pendidikan">
-						Jabatan Yang Diajukan
+						Jenjang Jabatan Fungsional
 					</label>
 					<select
 						className="appearance-none block w-full bg-gray-50 bg-opacity-60 border border-neutral-400  focus:outline-sky-600 focus:outline-1 rounded-md py-2 px-3 mb-3 transition-colors placeholder:text-sm text-sm"
