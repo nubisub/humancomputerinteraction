@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
 			<head>
 				<meta
 					property="twitter:image"
-					content="https://sijafung-bps.vercel.app/logoBPS.svg"
+					content="https://sijafung-bps.vercel.app/og.png"
 				></meta>
 				<meta property="twitter:card" content="summary"></meta>
 				<meta
@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
 				></meta>
 				<meta
 					property="twitter:description"
-					content="Sistem Informasi Jabatan Fungsional | Badan Pusat Statistik"
+					content="Sistem Informasi Jabatan Fungsional Badan Pusat Statistik"
 				></meta>
 				<meta
 					name="google-site-verification"
@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
 				/>
 				<meta
 					property="og:image"
-					content="https://sijafung-bps.vercel.app/logoBPS.svg"
+					content="https://sijafung-bps.vercel.app/og.png"
 				></meta>
 				<meta
 					property="og:title"
@@ -41,8 +41,25 @@ export default function RootLayout({ children }) {
 				></meta>
 				<meta
 					property="og:description"
-					content="Sistem Informasi Jabatan Fungsional | Badan Pusat Statistik"
+					content="Sistem Informasi Jabatan Fungsional Badan Pusat Statistik"
 				/>
+
+				<meta
+					property="og:image"
+					content="https://sijafung-bps.vercel.app/og.png"
+				></meta>
+				<meta
+					property="og:title"
+					content="SI Jafung | Badan Pusat Statistik"
+				></meta>
+				<meta
+					property="og:description"
+					content="Sistem Informasi Jabatan Fungsional Badan Pusat Statistik"
+				/>
+				<meta
+					property="og:url"
+					content="https://sijafung-bps.vercel.app/"
+				></meta>
 			</head>
 			<body className={inter.className}>{children}</body>
 		</html>
