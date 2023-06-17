@@ -32,20 +32,3 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-<hr>
-
-| Page Lama                                                                       | Page Baru                                     |
-| ------------------------------------------------------------------------------- | --------------------------------------------- |
-| <https://jafung.bps.go.id/main>                                                 | <http://localhost:3000/>                      |
-| <https://jafung.bps.go.id/login>                                                | <http://localhost:3000/login>                 |
-| <https://jafung.bps.go.id/permintaan_akun/form_registrasi_calon_prakom>         | <http://localhost:3000/registrasi/prakom>     |
-| <https://jafung.bps.go.id/permintaan_akun/form_registrasi_calon_statistisi>     | <http://localhost:3000/registrasi/statistisi> |
-| <https://jafung.bps.go.id/permintaan_akun/form_registrasi_admin_instansi>       | <http://localhost:3000/registrasi/admin>      |
-| <https://jafung.bps.go.id/permintaan_akun/form_registrasi_calon_prakom_bps>     | <http://localhost:3000/registrasi/prakom>     |
-| <https://jafung.bps.go.id/permintaan_akun/form_registrasi_calon_statistisi_bps> | <http://localhost:3000/registrasi/statistisi> |
-| <https://jafung.bps.go.id/peraturan/pranata_komputer>                           | <http://localhost:3000/peraturan>             |
-| <https://jafung.bps.go.id/peraturan/statistisi>                                 | <http://localhost:3000/peraturan>             |
-| <https://jafung.bps.go.id/tentang/pranata_komputer>                             | <http://localhost:3000/tentang>               |
-| <https://jafung.bps.go.id/tentang/statistisi>                                   | <http://localhost:3000/tentang>               |
-| <https://jafung.bps.go.id/forgot_password/forgotPassword>                       | <http://localhost:3000/forgotpassword>        |
