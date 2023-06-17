@@ -48,9 +48,9 @@ export default function Home() {
 				return;
 			}
 			setPosts(posts);
+			setLoading(false);
 		};
 		fetchData();
-		setLoading(false);
 	}, [query]);
 
 	// refresh page when back button is clicked
