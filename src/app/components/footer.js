@@ -16,7 +16,7 @@ export default function Footer() {
 				</span>
 				<ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 sm:mt-0">
 					<li>
-						App Version: v1.0.0 Developed with &#128149; by Kelompok 1 IMK SETIS
+						App Version: v1.1.1 Developed with &#128149; by Kelompok 1 IMK SETIS
 					</li>
 				</ul>
 			</div>

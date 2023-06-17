@@ -1,4 +1,31 @@
+"use client";
+import { useEffect, useState } from "react";
+
+const dataRaw = [
+"Jabatan Fungsional Statistisi dan Angka Kreditnya",
+"Ketentuan Pelaksanaan Permenpan-RB (Jabatan Fungsional Statistisi dan Angka Kreditnya",
+"Petunjuk Teknis Penilaian Angka Kredit Jabatan Fungsional Statistisi",
+"Petunjuk Teknis Pengangkatan Jabatan Fungsional Statistisi",
+"Petunjuk Teknis Tim Penilai Angka Kredit Jabatan Fungsional Statistisi",
+"Pedoman Penyusunan Formasi Statistisi",
+"Tunjangan Jabatan Fungsional Statistisi",
+"Petunjuk Pelaksanaan Jabatan Fungsional Statistisi dan Angka Kreditnya",
+"Petunjuk Teknis Penilaian Pranata Komputer dan Angka Kreditnya",
+"Petunjuk Teknis Penilaian Pranata Komputer dan Angka",
+];
+
+const filterData = (searchTerm) => {
+	return dataRaw.filter((value) => {
+		return value.toLowerCase().includes(searchTerm.toLowerCase());
+	});
+};
+
 export default function Home() {
+	const [search, setSearch] = useState("");
+	const [data, setData] = useState(dataRaw);
+	useEffect(() => {
+		setData(filterData(search));
+	}, [search]);
 	return (
 		<>
 			<div className="flex flex-col  md:mt-0 mt-2">
@@ -23,10 +50,11 @@ export default function Home() {
 										/>
 									</svg>
 									<input
+										onChange={(e) => setSearch(e.target.value)}
 										className="appearance-none block bg-gray-50 bg-opacity-60 border border-neutral-400  focus:outline-sky-600 focus:outline-1 rounded-xl  py-2 px-3 -ml-10 pl-12 transition-colors placeholder:text-sm"
 										type="text"
 										id="search"
-										placeholder="Cari Peraturan Prakom"
+										placeholder="Cari Peraturan"
 									></input>
 								</div>
 							</div>
@@ -45,172 +73,40 @@ export default function Home() {
 									</tr>
 								</thead>
 								<tbody>
-									<tr className="border-b dark:border-neutral-500">
-										<td className="whitespace-nowrap px-6 py-4 font-medium">
-											1
-										</td>
-										<td className="whitespace-nowrap px-6 py-4">
-											Jabatan Fungsional Statistisi dan Angka Kreditnya
-										</td>
-										<td>
-											<button
-												type="button"
-												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#1676ca] focus:outline-none dark:focus:ring-blue-800"
+									{data.length < 1 ? (
+										<tr className="border-b dark:border-neutral-500">
+											<td
+												colSpan={3}
+												className="whitespace-nowrap px-6 py-4 font-medium md:text-center text-left"
 											>
-												Download
-											</button>
-										</td>
-									</tr>
-									<tr className="border-b dark:border-neutral-500">
-										<td className="whitespace-nowrap px-6 py-4 font-medium">
-											2
-										</td>
-										<td className="whitespace-nowrap px-6 py-4">
-											Ketentuan Pelaksanaan Permenpan-RB (Jabatan Fungsional
-											Statistisi dan Angka Kreditnya
-										</td>
-										<td>
-											<button
-												type="button"
-												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#1676ca] focus:outline-none dark:focus:ring-blue-800"
-											>
-												Download
-											</button>
-										</td>
-									</tr>
-									<tr className="border-b dark:border-neutral-500">
-										<td className="whitespace-nowrap px-6 py-4 font-medium">
-											3
-										</td>
-										<td className="whitespace-nowrap px-6 py-4">
-											Petunjuk Teknis Penilaian Angka Kredit Jabatan Fungsional
-											Statistisi
-										</td>
-										<td>
-											<button
-												type="button"
-												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#1676ca] focus:outline-none dark:focus:ring-blue-800"
-											>
-												Download
-											</button>
-										</td>
-									</tr>
-									<tr className="border-b dark:border-neutral-500">
-										<td className="whitespace-nowrap px-6 py-4 font-medium">
-											4
-										</td>
-										<td className="whitespace-nowrap px-6 py-4">
-											Petunjuk Teknis Pengangkatan Jabatan Fungsional Statistisi
-										</td>
-										<td>
-											<button
-												type="button"
-												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#1676ca] focus:outline-none dark:focus:ring-blue-800"
-											>
-												Download
-											</button>
-										</td>
-									</tr>
-									<tr className="border-b dark:border-neutral-500">
-										<td className="whitespace-nowrap px-6 py-4 font-medium">
-											5
-										</td>
-										<td className="whitespace-nowrap px-6 py-4">
-											Petunjuk Teknis Tim Penilai Angka Kredit Jabatan
-											Fungsional Statistisi
-										</td>
-										<td>
-											<button
-												type="button"
-												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#1676ca] focus:outline-none dark:focus:ring-blue-800"
-											>
-												Download
-											</button>
-										</td>
-									</tr>
-									<tr className="border-b dark:border-neutral-500">
-										<td className="whitespace-nowrap px-6 py-4 font-medium">
-											6
-										</td>
-										<td className="whitespace-nowrap px-6 py-4">
-											Pedoman Penyusunan Formasi Statistisi
-										</td>
-										<td>
-											<button
-												type="button"
-												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#1676ca] focus:outline-none dark:focus:ring-blue-800"
-											>
-												Download
-											</button>
-										</td>
-									</tr>
-									<tr className="border-b dark:border-neutral-500">
-										<td className="whitespace-nowrap px-6 py-4 font-medium">
-											7
-										</td>
-										<td className="whitespace-nowrap px-6 py-4">
-											Tunjangan Jabatan Fungsional Statistisi
-										</td>
-										<td>
-											<button
-												type="button"
-												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#1676ca] focus:outline-none dark:focus:ring-blue-800"
-											>
-												Download
-											</button>
-										</td>
-									</tr>
-									<tr className="border-b dark:border-neutral-500">
-										<td className="whitespace-nowrap px-6 py-4 font-medium">
-											8
-										</td>
-										<td className="whitespace-nowrap px-6 py-4">
-											Petunjuk Pelaksanaan Jabatan Fungsional Statistisi dan
-											Angka Kreditnya
-										</td>
-										<td>
-											<button
-												type="button"
-												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#1676ca] focus:outline-none dark:focus:ring-blue-800"
-											>
-												Download
-											</button>
-										</td>
-									</tr>
-									<tr className="border-b dark:border-neutral-500">
-										<td className="whitespace-nowrap px-6 py-4 font-medium">
-											9
-										</td>
-										<td className="whitespace-nowrap px-6 py-4">
-											Petunjuk Teknis Penilaian Pranata Komputer dan Angka
-											Kreditnya
-										</td>
-										<td>
-											<button
-												type="button"
-												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#1676ca] focus:outline-none dark:focus:ring-blue-800"
-											>
-												Download
-											</button>
-										</td>
-									</tr>
-									<tr className="border-b dark:border-neutral-500">
-										<td className="whitespace-nowrap px-6 py-4 font-medium">
-											10
-										</td>
-										<td className="whitespace-nowrap px-6 py-4">
-											Petunjuk Teknis Penilaian Pranata Komputer dan Angka
-											Kreditnya
-										</td>
-										<td>
-											<button
-												type="button"
-												class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#1676ca] focus:outline-none dark:focus:ring-blue-800"
-											>
-												Download
-											</button>
-										</td>
-									</tr>
+												Peraturan tidak ditemukan
+											</td>
+										</tr>
+									) : (
+										data.map((value, index) => {
+											return (
+												<tr
+													key={index}
+													className="border-b dark:border-neutral-500"
+												>
+													<td className="whitespace-nowrap px-6 py-4 font-medium">
+														{index + 1}
+													</td>
+													<td className="whitespace-nowrap px-6 py-4">
+														{value}
+													</td>
+													<td>
+														<button
+															type="button"
+															class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#1676ca] focus:outline-none dark:focus:ring-blue-800"
+														>
+															Download
+														</button>
+													</td>
+												</tr>
+											);
+										})
+									)}
 								</tbody>
 							</table>
 						</div>
