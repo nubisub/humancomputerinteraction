@@ -12,10 +12,18 @@ export default function Home() {
 					<div>
 						{/* make circle */}
 						<div className="flex items-center mx-10 mt-8">
-							<div className="w-3 h-3 rounded-full bg-black"></div>
+							<Link href={"/"}>
+								<Image
+									src="/logoSijafungHitam.png"
+									alt="Picture of the author"
+									width={120}
+									height={120}
+								/>
+							</Link>
+							{/* <div className="w-3 h-3 rounded-full bg-black"></div>
 							<Link href={"/"} className="text-xl font-semibold ml-2">
 								SiJafung
-							</Link>
+							</Link> */}
 						</div>
 					</div>
 					<div className="flex flex-col md:w-3/4 md:px-24 md:my-0 my-8 px-8 mx-auto">
