@@ -14,7 +14,7 @@ export default function Home() {
 						<div className="flex items-center mx-10 mt-8">
 							<Link href={"/"}>
 								<Image
-									src="/logoSijafungHitam1.png"
+									src="/logoSijafungHitam.svg"
 									alt="Picture of the author"
 									width={120}
 									height={120}
