@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Admin from "./Admin";
 import Main from "@/app/components/main";
-
+import Akun from "@/app/components/akun";
 const navigation = [
 	{ name: "Registrasi", href: "/", current: true },
 	{ name: "Pranata Komputer", href: "/registrasi/prakom", current: true },
@@ -24,9 +24,12 @@ export default function Home() {
 	}
 	return (
 		<>
+		<div className="flex justify-between">
 			<h1 className="md:text-3xl text-2xl md:mx-0 mx-2 font-semibold md:my-3 my-4 mb-1 text-white">
 				Registrasi Akun
 			</h1>
+			<Akun />
+		</div>
 			<h2 className="text-md   md:mx-0 mx-2 md:mb-8 mb-3 text-white">
 				Permintaan Akun Admin Instansi
 			</h2>
