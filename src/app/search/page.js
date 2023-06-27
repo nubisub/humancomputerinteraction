@@ -310,7 +310,7 @@ export default function Home() {
 										Hmmmmm...
 									</p>
 									<p className="text-gray-600 md:text-lg text-md ">
-										Mohon maaf, kami tidak menemukan apapun tentang {" "} <span className="text-blue-700">"{query}"</span>
+										Mohon maaf, kami tidak menemukan apapun tentang {" "} <span className="text-blue-700">{`"${query}"`}</span>
 									</p>
 									<p className="text-gray-600 md:text-md text-sm ">
 										Cek kembali kata kunci pencarian anda atau coba kata kunci lainnya
