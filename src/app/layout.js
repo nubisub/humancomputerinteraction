@@ -4,7 +4,7 @@ import Sidebar from "./components/sidebar";
 import Footer from "./components/footer";
 const inter = Inter({ subsets: ["latin"] });
 import MobileTopNav from "./components/mobileTopNav";
-
+import NextTopLoader from "nextjs-toploader";
 export const metadata = {
 	title: "SI Jafung | Badan Pusat Statistik",
 	description: "Sistem Informasi Jabatan Fungsional | Badan Pusat Statistik",
@@ -61,7 +61,10 @@ export default function RootLayout({ children }) {
 					content="https://sijafung-bps.vercel.app/"
 				></meta>
 			</head>
-			<body className={inter.className}>{children}</body>
+			<body className={inter.className}>
+				<NextTopLoader color="#2299DD" />
+				{children}
+			</body>
 		</html>
 	);
 }
