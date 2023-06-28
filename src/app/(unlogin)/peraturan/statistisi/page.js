@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const dataRaw = [
 "Jabatan Fungsional Statistisi dan Angka Kreditnya",
@@ -96,12 +97,11 @@ export default function Home() {
 														{value}
 													</td>
 													<td>
-														<button
-															type="button"
-															class="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#1676ca] focus:outline-none dark:focus:ring-blue-800"
+														<Link href="/file/document.pdf"
+															className="text-white bg-[#228be6] hover:bg-blue-800 font-medium rounded-md text-sm px-4 py-2  dark:hover:bg-[#1676ca] focus:outline-none dark:focus:ring-blue-800"
 														>
 															Download
-														</button>
+														</Link>
 													</td>
 												</tr>
 											);

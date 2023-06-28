@@ -69,7 +69,7 @@ export default function MobileTopNav() {
 			<div
 				className={
 					isMenuOpen
-						? "w-full md:flex md:items-center md:w-auto"
+						? "w-full md:flex md:items-center md:w-auto transition-opacity duration-900 ease-in-out opacity-100"
 						: "hidden w-full md:flex md:items-center md:w-auto"
 				}
 				id="menu"

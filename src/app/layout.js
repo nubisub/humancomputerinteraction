@@ -5,6 +5,9 @@ import Footer from "./components/footer";
 const inter = Inter({ subsets: ["latin"] });
 import MobileTopNav from "./components/mobileTopNav";
 import NextTopLoader from "nextjs-toploader";
+import Link from "next/link";
+import Notification from "./components/notification";
+
 export const metadata = {
 	title: "SI Jafung | Badan Pusat Statistik",
 	description: "Sistem Informasi Jabatan Fungsional | Badan Pusat Statistik",
@@ -62,7 +65,9 @@ export default function RootLayout({ children }) {
 				></meta>
 			</head>
 			<body className={inter.className}>
-				<NextTopLoader color="#2299DD" />
+				<NextTopLoader showSpinner={false} color="#2299DD" />
+				<Notification />
+
 				{children}
 			</body>
 		</html>

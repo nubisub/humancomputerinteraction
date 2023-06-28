@@ -4,8 +4,10 @@ import { useRouter } from "next/navigation";
 import { Menu } from "@headlessui/react";
 import { Fragment } from "react";
 import { Transition } from "@headlessui/react";
-
+import { Switch } from "@headlessui/react";
+import { useState } from "react";
 export default function TopNav() {
+	const [enabled, setEnabled] = useState(false);
 	const router = useRouter();
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -76,7 +78,6 @@ export default function TopNav() {
 				>
 					Login
 				</Link> */}
-
 				<Menu as="div" className="relative inline-block text-left">
 					<div>
 						<Menu.Button className="inline-flex w-full justify-center rounded-full bg-white  p-1 px-2 gap-x-1 pl-3 text-sm font-medium text-black hover:drop-shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 items-center ">
@@ -121,7 +122,7 @@ export default function TopNav() {
 								<Menu.Item>
 									{({ active }) => (
 										<Link
-										href={"/auth"}
+											href={"/auth"}
 											className={`${
 												active ? "bg-slate-100" : "text-gray-900"
 											} group flex w-full flex-col rounded-md px-4 py-2 text-sm`}
@@ -133,7 +134,7 @@ export default function TopNav() {
 								<Menu.Item>
 									{({ active }) => (
 										<Link
-										href={"/auth"}
+											href={"/auth"}
 											className={`${
 												active ? "bg-slate-100" : "text-gray-900"
 											} group flex w-full flex-col rounded-md px-4 py-2 text-sm`}
@@ -145,7 +146,7 @@ export default function TopNav() {
 								<Menu.Item>
 									{({ active }) => (
 										<Link
-										href={"/tentang"}
+											href={"/tentang"}
 											className={`${
 												active ? "bg-slate-100" : "text-gray-900"
 											} group flex w-full flex-col rounded-md px-4 py-2 text-sm`}
