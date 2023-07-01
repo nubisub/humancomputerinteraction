@@ -7,6 +7,9 @@ import MobileTopNav from "./components/mobileTopNav";
 import NextTopLoader from "nextjs-toploader";
 import Link from "next/link";
 import Notification from "./components/notification";
+import { SessionProvider } from "next-auth/react";
+import { Session } from "next-auth";
+import AuthProvider from "./components/AuthProvider";
 
 export const metadata = {
 	title: "SI Jafung | Badan Pusat Statistik",
@@ -67,8 +70,7 @@ export default function RootLayout({ children }) {
 			<body className={inter.className}>
 				<NextTopLoader showSpinner={false} color="#2299DD" />
 				<Notification />
-
-				{children}
+				<AuthProvider>{children}</AuthProvider>
 			</body>
 		</html>
 	);

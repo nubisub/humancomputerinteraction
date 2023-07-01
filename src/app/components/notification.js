@@ -1,11 +1,19 @@
 "use client";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
+
 
 export default function Notification() {
 	const [isMenuOpen, setIsMenuOpen] = useState();
+	const pathname = usePathname();
+
 
     useEffect(() => {
         const isMenuOpen = localStorage.getItem("isMenuOpen");
+		if (pathname === "/auth") {
+			setIsMenuOpen(false);
+			return;
+		}
         if (isMenuOpen === "false") {
             setIsMenuOpen(false);
         } else {
@@ -16,7 +24,7 @@ export default function Notification() {
             setIsMenuOpen(true);
         }
 
-    }, []);
+    }, [pathname]);
 
     const handleShow = () => {
         setIsMenuOpen(false);
