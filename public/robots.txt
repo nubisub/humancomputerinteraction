@@ -1,0 +1,7 @@
+User-agent: nameOfBot
+Disallow: /auth/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://sijafung-bps.vercel.app/sitemap.xml
