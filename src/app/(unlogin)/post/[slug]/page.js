@@ -1,6 +1,7 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Link from "next/link";
 import Image from "next/image";
+
 export async function generateMetadata({ params }) {
 	let post = await getPost(params.slug);
 	return {
@@ -39,7 +40,7 @@ export default async function Page({ params }) {
 
 	return (
 		<>
-			<article className="prose min-w-full py-3 pb-6 md:px-4 px-2">
+			<article className="prose min-w-full py-3 pb-6 md:px-4 px-4">
 				<MDXRemote source={content} />
 				<div className="flex items-center gap-2 my-1 py-2">
 					<svg
@@ -62,7 +63,7 @@ export default async function Page({ params }) {
 						{parseTime(post.frontMatter.date)}
 					</time>
 				</div>
-				<h1 className="my-2 text-lg md:text-4xl md:leading-tight leading-snug">
+				<h1 className="my-2 text-2xl md:text-4xl md:leading-tight leading-snug">
 					{post.frontMatter.title}
 				</h1>
 				<div className="mt-4 py-2 flex items-center justify-between">

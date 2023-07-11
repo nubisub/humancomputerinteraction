@@ -4,19 +4,20 @@ import { useRouter } from "next/navigation";
 import { Menu } from "@headlessui/react";
 import { Fragment } from "react";
 import { Transition } from "@headlessui/react";
+import { useSession } from "next-auth/react";	
+import { signOut } from "next-auth/react";
+
 
 export default function TopNav() {
+		const { data: session, status } = useSession();
+
+
+
 	return (
 		<>
 			{/* Akun dan Notifikasi */}
 			<div className="md:flex hidden gap-x-4 items-center justify-center">
-				{/* <Link
-					href={"/auth"}
-					type="button"
-					className="font-semibold px-8  text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:outline-none rounded-lg text-sm py-2.5 text-center inline-flex items-center  dark:bg-white dark:border-gray-700 dark:text-gray-900 dark:hover:bg-gray-200"
-				>
-					Login
-				</Link> */}
+
 
 				<Menu as="div" className="relative inline-block text-left">
 					<div>
@@ -97,6 +98,22 @@ export default function TopNav() {
 										</Link>
 									)}
 								</Menu.Item>
+								{
+									session && (
+										<Menu.Item>
+									{({ active }) => (
+										<button
+											onClick={() => signOut()}
+											className={`${
+												active ? "bg-slate-100" : "text-gray-900"
+											} group flex w-full flex-col rounded-md px-4 py-2 text-sm`}
+										>
+											Logout
+										</button>
+									)}
+								</Menu.Item>
+									)
+								}
 							</div>
 						</Menu.Items>
 					</Transition>

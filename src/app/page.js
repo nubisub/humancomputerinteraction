@@ -29,7 +29,7 @@ export default async function Home() {
 			<MobileTopNav />
 			<Sidebar />
 
-			<main className="md:absolute md:w-[calc(100vw-267px)] w-screen box-border md:pt-5 p-1 px-2 md:px-0 pt-0.5 left-[250px]">
+			<main className="md:absolute md:mt-0 mt-[56px] md:w-[calc(100vw-267px)] w-screen box-border md:pt-5 p-1 px-2 md:px-0 pt-0.5 left-[250px]">
 				<div className="md:mx-20 md:mb-24 mb-4">
 					<TopNav />
 					<Main>
@@ -41,12 +41,12 @@ export default async function Home() {
 							Berita Terkini
 						</h3>
 
-						<ol class="relative">
-							<ol class="relative border-l md:ml-8 ml-8 mr-4 border-gray-200 dark:border-gray-700">
+						<ol className="relative">
+							<ol className="relative border-l md:ml-8 ml-8 mr-4 border-gray-200 dark:border-gray-700">
 								{posts &&
 									posts.map((post) => (
-										<li key={post.name} class="ml-6 md:mb-10 mb-6">
-											<span class="absolute mt-1 flex items-center justify-center w-6 h-6 bg-white rounded-full -left-3 ring-8 ring-white">
+										<li key={post.name} className="ml-6 md:mb-10 mb-6">
+											<span className="absolute mt-1 flex items-center justify-center w-6 h-6 bg-white rounded-full -left-3 ring-8 ring-white">
 												<svg
 													xmlns="http://www.w3.org/2000/svg"
 													fill="none"
@@ -64,14 +64,14 @@ export default async function Home() {
 											</span>
 											<Link
 												href={`/post/${post.slug}`}
-												className="mb-8 md:text-xl font-semibold hover:text-[#228be6]"
+												className="mb-8 md:text-xl text-sm font-semibold hover:text-[#228be6]"
 											>
 												<span className="py-2">{post.frontMatter.title}</span>
 											</Link>
 											<time className="block mb-2 mt-1 md:text-sm text-xs font-medium leading-none text-gray-600">
 												{parseTime(post.frontMatter.date)}
 											</time>
-											<p class="text-base md:block hidden font-normal text-gray-500">
+											<p className="text-base md:block hidden font-normal text-gray-500">
 												{post.frontMatter.summary} ....{" "}
 												<span className="text-blue-700 hover:text-blue-400">
 													<Link href={`/post/${post.slug}`}>

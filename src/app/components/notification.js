@@ -36,12 +36,15 @@ export default function Notification() {
 
 
 	return isMenuOpen ? (
-		<div className="ml-[250px] bg-[#2E51ED] h-9 md:flex hidden justify-center items-center text-white text-sm font-semibold shadow-sm">
-			Bagi JF Statistisi yang menilaikan DUPAK di BPS Pusat, harap mengisi link
+		<div className="ml-[250px] bg-[#2E51ED] min-h-9 md:flex hidden justify-center items-center text-white text-sm font-semibold shadow-sm">
+			<div className="px-4 py-2">
+				Bagi JF Statistisi yang menilaikan DUPAK di BPS Pusat, harap mengisi link
 			berikut ini: &nbsp;
 			<a className="underline" href="https://s.bps.go.id/lapordupakstatistisi">
 				https://s.bps.go.id/lapordupakstatistisi
 			</a>
+			</div>
+			
 			<button
 				id="close-notification"
 				aria-label="close notification"

@@ -12,7 +12,7 @@ export default function Home() {
 		<>
 			<div className="w-full mx-auto px-2 py-4 sm:px-0 md:mt-0 mt-2">
 				<Tab.Group>
-					<Tab.List className="flex max-w-xl mx-auto space-x-1 rounded-xl bg-blue-900/20 p-1">
+					<Tab.List className="flex max-w-xl mx-4 md:mx-auto space-x-1 rounded-xl bg-blue-900/20 p-1">
 						<Tab
 							className={({ selected }) =>
 								classNames(

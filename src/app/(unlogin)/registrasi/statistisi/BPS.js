@@ -23,7 +23,7 @@ export default function BPS() {
 	return (
 		<div className="py-2">
 			<h3 className="px-3 font-semibold text-lg">Data Diri Dan Pekerjaan</h3>
-			<div className="md:flex flex-col mb-6 gap-y-1 py-2">
+			<div className="md:flex flex-col gap-y-1 py-2">
 				{/* NIP */}
 				<div className="w-full block px-3">
 					<label className="block mb-1 text-sm" for="nip">

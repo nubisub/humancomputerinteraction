@@ -1,10 +1,14 @@
+'use client'
+import { useSession } from "next-auth/react";	
 import Image from "next/image";
 import Link from "next/link";
 const getYear = () => {
 	return new Date().getFullYear();
 };
+import { signOut } from "next-auth/react";
 
 export default function Home() {
+	const { data: session, status } = useSession();
 	return (
 		<div className="w-screen h-screen flex flex-row">
 			<div className="md:w-1/2 w-full flex items-center">
@@ -26,7 +30,15 @@ export default function Home() {
 							</Link> */}
 						</div>
 					</div>
-					<div className="flex flex-col md:w-3/4 md:px-24 md:my-0 my-8 px-8 mx-auto">
+					{status === "authenticated" && (
+						<div className="flex flex-col gap-2 items-center md:items-start md:mx-10">
+							<div className="flex flex-col items-center md:items-start">
+								<h1 className="text-2xl font-semibold">{session.user.name}</h1>
+								<h2 className="text-gray-500 text-sm">{session.user.email}</h2>
+							</div>
+						</div>
+					)}
+					<div className="flex flex-col mt-16 md:w-3/4 md:px-24 md:my-0 my-8 px-8 mx-auto">
 						<div className="flex gap-3 flex-col my-4">
 							<h1 className="md:text-4xl text-2xl text-center md:text-left font-semibold">
 								Selamat Datang
@@ -85,7 +97,7 @@ export default function Home() {
 										Lupa Password?
 									</Link>
 								</div>
-
+							<div className="flex gap-y-2 flex-col">
 								<button
 									className="bg-[#228be6] hover:bg-[#177dd6] text-white font-semibold w-full 	py-2 px-4 rounded-md mb-2"
 									type="submit"
@@ -105,6 +117,39 @@ export default function Home() {
 									/>
 									Masuk Dengan SSO BPS
 								</Link>
+								<Link
+									href={"/api/auth/signin"}
+									className=" text-black hover:bg-gray-400 hover:text-white border-gray-400 text-center border-opacity-40 border-2 font-medium text-sm w-full py-2 px-4 rounded-md flex justify-center items-center gap-2"
+									type="submit"
+								>
+									<img
+										alt="nextauth"
+										src="https://next-auth.js.org/img/logo/logo-sm.png"
+										width={20}
+										height={20}
+									/>
+									Masuk Dengan SSO Lainnya
+								</Link>
+								{
+									session && (
+										<button
+									onClick={() => signOut()}
+									className=" text-black hover:bg-gray-400 hover:text-white border-gray-400 text-center border-opacity-40 border-2 font-medium text-sm w-full py-2 px-4 rounded-md flex justify-center items-center gap-2"
+									type="submit"
+								>
+									<img
+										alt="nextauth"
+										src="https://next-auth.js.org/img/logo/logo-sm.png"
+										width={20}
+										height={20}
+									/>
+									Sign Out
+								</button>
+									)
+								}
+								
+							</div>
+								
 								<div className="mt-4">
 									<p className="text-center text-sm text-gray-500">
 										Belum punya akun?{" "}

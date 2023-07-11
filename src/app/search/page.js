@@ -91,12 +91,12 @@ export default function Home() {
 			<MobileTopNav />
 			<Sidebar />
 
-			<main className="md:absolute md:w-[calc(100vw-267px)] w-screen box-border md:pt-5 p-1 px-2 md:px-0 pt-0.5 left-[250px]">
+			<main className="md:absolute md:mt-0 mt-[56px] md:w-[calc(100vw-267px)] w-screen box-border md:pt-5 p-1 px-2 md:px-0 pt-0.5 left-[250px]">
 				<div className="md:mx-20 md:mb-24 mb-4 ">
-					<div className="md:flex justify-between items-center my-2 md:mb-8 z-50">
+					<div className="md:flex justify-between items-center my-2 md:mb-8 mb-4 z-50">
 						{/* Searchbar */}
-						<div>
-							<form className="relative flex items-center md:w-[800px] md:mx-0 mx-4 md:mt-0 mt-4  h-11 md:rounded-full rounded-3xl focus-within:shadow-lg bg-white overflow-hidden">
+						<div className="md:w-3/4 w-full">
+							<form className="relative flex items-center md:mx-0 mx-4 md:mt-0 mt-4  h-11 md:rounded-full rounded-3xl focus-within:shadow-lg bg-white overflow-hidden">
 								<div className="grid place-items-center h-full w-12 ml-2 text-gray-400">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
@@ -241,18 +241,17 @@ export default function Home() {
 						</h1>
 						{loading ? (
 							<ol className="relative mb-6 min-h-[24rem]">
-								<ol className="relative  md:ml-8 ml-8 mr-4 border-gray-200 dark:border-gray-700  mt-6">
+								<ol className="relative   ml-4 mr-4 border-gray-200 dark:border-gray-700  mt-6">
 									{
 										// loop 5 times
 										[...Array(3)].map((_, i) => (
-											<li key={i} className="ml-6 md:mb-10 mb-6">
+											<li key={i} className="ml-2 md:mb-10 mb-6">
 												<Skeleton height={25} />
 												<Skeleton height={15} width={"16%"} />
 												<Skeleton height={15} />
 												<Skeleton height={15} />
 											</li>
 										))
-										
 									}
 								</ol>
 							</ol>
@@ -286,7 +285,7 @@ export default function Home() {
 											<time className="block mb-2 mt-1 md:text-sm text-xs font-medium leading-none text-gray-600">
 												{parseTime(post.date)}
 											</time>
-											<p className	="text-base md:block hidden font-normal text-gray-500">
+											<p className="text-base md:block hidden font-normal text-gray-500">
 												{post.summary} ....{" "}
 												<span className="text-blue-700 hover:text-blue-400">
 													<Link href={`/post/${post.slug}`}>
@@ -301,16 +300,15 @@ export default function Home() {
 						) : (
 							<div className="flex justify-center items-center h-96">
 								<div className="flex flex-col justify-start gap-y-2 text-gray-800">
-									<p className="text-gray-700 md:text-xl text-lg ">
-										Hmmmmm...
-									</p>
+									<p className="text-gray-700 md:text-xl text-lg ">Hmmmmm...</p>
 									<p className="text-gray-600 md:text-lg text-md ">
-										Mohon maaf, kami tidak menemukan apapun tentang {" "} <span className="text-blue-700">{`"${query}"`}</span>
+										Mohon maaf, kami tidak menemukan apapun tentang{" "}
+										<span className="text-blue-700">{`"${query}"`}</span>
 									</p>
 									<p className="text-gray-600 md:text-md text-sm ">
-										Cek kembali kata kunci pencarian anda atau coba kata kunci lainnya
+										Cek kembali kata kunci pencarian anda atau coba kata kunci
+										lainnya
 									</p>
-
 								</div>
 							</div>
 						)}

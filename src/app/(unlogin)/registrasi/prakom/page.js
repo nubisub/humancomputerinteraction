@@ -22,12 +22,12 @@ export default function Home() {
 	}
 	return (
 		<>
-		<div className="flex justify-between">
-			<h1 className="md:text-3xl text-2xl md:mx-0 mx-2 font-semibold md:my-3 my-4 mb-1 text-white">
-				Registrasi Akun
-			</h1>
-			<Akun />
-		</div>
+			<div className="flex justify-between">
+				<h1 className="md:text-3xl text-2xl md:mx-0 mx-2 font-semibold md:my-3 my-4 mb-1 text-white">
+					Registrasi Akun
+				</h1>
+				<Akun />
+			</div>
 			<h2 className="text-md   md:mx-0 mx-2 md:mb-8 mb-3 text-white">
 				Permintaan Akun Calon Pranata Komputer
 			</h2>
@@ -35,7 +35,7 @@ export default function Home() {
 			<Main>
 				<div className="w-full mx-auto px-0 md:mt-0 mt-2 py-4 sm:px-0">
 					<Tab.Group>
-						<Tab.List className="flex max-w-xl mx-auto space-x-1 rounded-xl bg-blue-900/20 p-1">
+						<Tab.List className="flex mx-4 md:mx-auto  max-w-xl space-x-1 rounded-xl bg-blue-900/20 p-1">
 							<Tab
 								className={({ selected }) =>
 									classNames(
