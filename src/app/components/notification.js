@@ -43,7 +43,8 @@ export default function Notification() {
 				https://s.bps.go.id/lapordupakstatistisi
 			</a>
 			<button
-
+				id="close-notification"
+				aria-label="close notification"
 				className="mx-2
                 absolute
                 right-0 

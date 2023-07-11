@@ -95,7 +95,7 @@ export default function Home() {
 				<div className="md:mx-20 md:mb-24 mb-4 ">
 					<div className="md:flex justify-between items-center my-2 md:mb-8 z-50">
 						{/* Searchbar */}
-						<div className="">
+						<div>
 							<form className="relative flex items-center md:w-[800px] md:mx-0 mx-4 md:mt-0 mt-4  h-11 md:rounded-full rounded-3xl focus-within:shadow-lg bg-white overflow-hidden">
 								<div className="grid place-items-center h-full w-12 ml-2 text-gray-400">
 									<svg
@@ -106,9 +106,9 @@ export default function Home() {
 										stroke="currentColor"
 									>
 										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											strokeWidth="2"
 											d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
 										/>
 									</svg>
@@ -124,6 +124,8 @@ export default function Home() {
 									onChange={(e) => setPreQuery(e.target.value)}
 								/>
 								<button
+									id="search-button"
+									aria-label="search-button"
 									type="submit"
 									onClick={(e) => {
 										searchHandler(e);
@@ -150,13 +152,6 @@ export default function Home() {
 
 						{/* Akun dan Notifikasi */}
 						<div className="md:flex hidden gap-x-4 items-center justify-center">
-							{/* <Link
-								href={"/auth"}
-								type="button"
-								className="font-semibold px-8  text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:outline-none rounded-lg text-sm py-2.5 text-center inline-flex items-center  dark:bg-white dark:border-gray-700 dark:text-gray-900 dark:hover:bg-gray-200"
-							>
-								Login
-							</Link> */}
 							<Menu as="div" className="relative inline-block text-left">
 								<div>
 									<Menu.Button className="inline-flex w-full justify-center rounded-full bg-white  p-1 px-2 gap-x-1 pl-3 text-sm font-medium text-black hover:drop-shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 items-center ">
@@ -250,7 +245,7 @@ export default function Home() {
 									{
 										// loop 5 times
 										[...Array(3)].map((_, i) => (
-											<li key={i} class="ml-6 md:mb-10 mb-6">
+											<li key={i} className="ml-6 md:mb-10 mb-6">
 												<Skeleton height={25} />
 												<Skeleton height={15} width={"16%"} />
 												<Skeleton height={15} />
@@ -265,8 +260,8 @@ export default function Home() {
 							<ol className="relative mb-6 min-h-[24rem]">
 								<ol className="relative border-l md:ml-8 ml-8 mr-4 border-gray-200 dark:border-gray-700  mt-6">
 									{posts.map((post) => (
-										<li key={post.title} class="ml-6 md:mb-10 mb-6">
-											<span class="absolute mt-1 flex items-center justify-center w-6 h-6 bg-white rounded-full -left-3 ring-8 ring-white">
+										<li key={post.title} className="ml-6 md:mb-10 mb-6">
+											<span className="absolute mt-1 flex items-center justify-center w-6 h-6 bg-white rounded-full -left-3 ring-8 ring-white">
 												<svg
 													xmlns="http://www.w3.org/2000/svg"
 													fill="none"
@@ -291,7 +286,7 @@ export default function Home() {
 											<time className="block mb-2 mt-1 md:text-sm text-xs font-medium leading-none text-gray-600">
 												{parseTime(post.date)}
 											</time>
-											<p class="text-base md:block hidden font-normal text-gray-500">
+											<p className	="text-base md:block hidden font-normal text-gray-500">
 												{post.summary} ....{" "}
 												<span className="text-blue-700 hover:text-blue-400">
 													<Link href={`/post/${post.slug}`}>

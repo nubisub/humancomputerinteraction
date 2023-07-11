@@ -33,9 +33,9 @@ export default function TopNav() {
 							stroke="currentColor"
 						>
 							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								strokeWidth="2"
 								d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
 							/>
 						</svg>
@@ -48,6 +48,8 @@ export default function TopNav() {
 						placeholder="Cari Sesuatu ..."
 					/>
 					<button
+						id="searchButton"
+						aria-label="search"
 						type="submit"
 						className="grid place-items-center hover:bg-blue-700 h-full w-16 cursor-pointer bg-blue-600 shadow-md text-white"
 					>
@@ -59,9 +61,9 @@ export default function TopNav() {
 							stroke="currentColor"
 						>
 							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								strokeWidth="2"
 								d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
 							/>
 						</svg>

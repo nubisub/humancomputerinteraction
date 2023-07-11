@@ -20,7 +20,9 @@ export default function TopNav() {
 
 				<Menu as="div" className="relative inline-block text-left">
 					<div>
-						<Menu.Button className="inline-flex w-full justify-center rounded-full bg-white  p-1 px-2 gap-x-1 pl-3 text-sm font-medium text-black hover:drop-shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 items-center ">
+						<Menu.Button
+						id="accountButton"
+						className="inline-flex w-full justify-center rounded-full bg-white  p-1 px-2 gap-x-1 pl-3 text-sm font-medium text-black hover:drop-shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 items-center ">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 24 24"

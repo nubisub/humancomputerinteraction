@@ -119,16 +119,16 @@ export default function Home() {
 							</form>
 						</div>
 					</div>
-					<footer class="bg-white border-gray-300 w-full border-opacity-30 border-t-2 shadow-sm md:block hidden md:bottom-0 ">
-						<div class="w-full mx-auto max-w-screen-xl p-2 px-6 md:flex md:items-center md:justify-between ">
-							<span class="text-xs text-gray-600 sm:text-center">
+					<footer className="bg-white border-gray-300 w-full border-opacity-30 border-t-2 shadow-sm md:block hidden md:bottom-0 ">
+						<div className="w-full mx-auto max-w-screen-xl p-2 px-6 md:flex md:items-center md:justify-between ">
+							<span className="text-xs text-gray-600 sm:text-center">
 								© {getYear()}{" "}
-								<Link href="/" class="hover:underline">
+								<Link href="/" className="hover:underline">
 									Kelompok 1™
 								</Link>
 								. All Rights Reserved.
 							</span>
-							<ul class="flex flex-wrap items-center mt-3 text-xs font-medium text-gray-500 sm:mt-0">
+							<ul className="flex flex-wrap items-center mt-3 text-xs font-medium text-gray-500 sm:mt-0">
 								<li>
 									App Version: v1.1.1 Developed with &#128149; by Kelompok 1 IMK
 									SETIS

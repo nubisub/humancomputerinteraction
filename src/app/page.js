@@ -33,11 +33,11 @@ export default async function Home() {
 				<div className="md:mx-20 md:mb-24 mb-4">
 					<TopNav />
 					<Main>
-						<h3 class="md:text-3xl text-xl md:mx-0 mx-4 text-gray-700 font-semibold  md:ml-3 mb-4 mt-6">
+						<h3 className="md:text-3xl text-xl md:mx-0 mx-4 text-gray-700 font-semibold  md:ml-3 mb-4 mt-6">
 							Sistem Informasi Jabatan Fungsional - BPS
 						</h3>
 						<hr className="md:ml-3 mx-3 border-slate-400"></hr>
-						<h3 class="md:text-xl  mx-4 text-md text-gray-700 font-semibold  md:ml-3 md:my-8 m-3 mt-4">
+						<h3 className="md:text-xl  mx-4 text-md text-gray-700 font-semibold  md:ml-3 md:my-8 m-3 mt-4">
 							Berita Terkini
 						</h3>
 
