@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hci-app-deployment
+  labels:
+    app: hci-app
+spec:
+  selector:
+    matchLabels:
+      app: hci-app
+  template:
+    metadata:
+      labels:
+        app: hci-app
+    spec:
+      containers:
+        - name: hci-app-deployment
+          image: nubisub/hci:1.0.0
+          ports:
+            - containerPort: 3000

@@ -35,6 +35,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Docker Image
 ```bash
+cd docker
 docker compose up
 ```
 
